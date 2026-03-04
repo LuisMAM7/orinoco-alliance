@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orinoco Alliance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+    /*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0}}}@layer theme{:root,:host{--font-sans:"Open Sans", ui-sans-serif, system-ui, sans-serif;--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--color-amber-100:oklch(96.2% .059 95.617);--color-amber-400:oklch(82.8% .189 84.429);--color-amber-500:oklch(76.9% .188 70.08);--color-amber-600:oklch(66.6% .179 58.318);--color-amber-700:oklch(55.5% .163 48.998);--color-slate-50:oklch(98.4% .003 247.858);--color-slate-100:oklch(96.8% .007 247.896);--color-slate-200:oklch(92.9% .013 255.508);--color-slate-300:oklch(86.9% .022 252.894);--color-slate-400:oklch(70.4% .04 256.788);--color-slate-600:oklch(44.6% .043 257.281);--color-slate-700:oklch(37.2% .044 257.287);--color-slate-800:oklch(27.9% .041 260.031);--color-slate-900:oklch(20.8% .042 265.755);--color-white:#fff;--spacing:.25rem;--container-xs:20rem;--container-2xl:42rem;--container-3xl:48rem;--container-7xl:80rem;--text-xs:.75rem;--text-xs--line-height:calc(1 / .75);--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--text-lg:1.125rem;--text-lg--line-height:calc(1.75 / 1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75 / 1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2 / 1.5);--text-3xl:1.875rem;--text-3xl--line-height:calc(2.25 / 1.875);--text-4xl:2.25rem;--text-4xl--line-height:calc(2.5 / 2.25);--text-6xl:3.75rem;--text-6xl--line-height:1;--font-weight-light:300;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--tracking-wide:.025em;--tracking-wider:.05em;--leading-tight:1.25;--leading-relaxed:1.625;--radius-sm:.25rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--blur-sm:8px;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono);--font-heading:"Montserrat", ui-sans-serif, system-ui, sans-serif}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.inset-0{inset:calc(var(--spacing) * 0)}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.col-span-1{grid-column:span 1/span 1}.mx-auto{margin-inline:auto}.mt-8{margin-top:calc(var(--spacing) * 8)}.mb-1{margin-bottom:calc(var(--spacing) * 1)}.mb-2{margin-bottom:calc(var(--spacing) * 2)}.mb-3{margin-bottom:calc(var(--spacing) * 3)}.mb-4{margin-bottom:calc(var(--spacing) * 4)}.mb-6{margin-bottom:calc(var(--spacing) * 6)}.mb-8{margin-bottom:calc(var(--spacing) * 8)}.mb-10{margin-bottom:calc(var(--spacing) * 10)}.mb-16{margin-bottom:calc(var(--spacing) * 16)}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-block{display:inline-block}.h-1{height:calc(var(--spacing) * 1)}.h-4{height:calc(var(--spacing) * 4)}.h-5{height:calc(var(--spacing) * 5)}.h-6{height:calc(var(--spacing) * 6)}.h-8{height:calc(var(--spacing) * 8)}.h-10{height:calc(var(--spacing) * 10)}.h-20{height:calc(var(--spacing) * 20)}.h-full{height:100%}.h-screen{height:100vh}.min-h-screen{min-height:100vh}.w-4{width:calc(var(--spacing) * 4)}.w-5{width:calc(var(--spacing) * 5)}.w-6{width:calc(var(--spacing) * 6)}.w-8{width:calc(var(--spacing) * 8)}.w-10{width:calc(var(--spacing) * 10)}.w-24{width:calc(var(--spacing) * 24)}.w-full{width:100%}.max-w-2xl{max-width:var(--container-2xl)}.max-w-3xl{max-width:var(--container-3xl)}.max-w-7xl{max-width:var(--container-7xl)}.max-w-xs{max-width:var(--container-xs)}.flex-shrink-0{flex-shrink:0}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-2{gap:calc(var(--spacing) * 2)}.gap-3{gap:calc(var(--spacing) * 3)}.gap-4{gap:calc(var(--spacing) * 4)}.gap-6{gap:calc(var(--spacing) * 6)}.gap-8{gap:calc(var(--spacing) * 8)}.gap-12{gap:calc(var(--spacing) * 12)}.gap-16{gap:calc(var(--spacing) * 16)}:where(.space-y-1>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-4>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-6>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-x-8>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing) * 8) * var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse)))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:var(--radius-2xl)}.rounded-full{border-radius:3.40282e38px}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-sm{border-radius:var(--radius-sm)}.rounded-xl{border-radius:var(--radius-xl)}.border{border-style:var(--tw-border-style);border-width:1px}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-t-4{border-top-style:var(--tw-border-style);border-top-width:4px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-l-4{border-left-style:var(--tw-border-style);border-left-width:4px}.border-amber-500{border-color:var(--color-amber-500)}.border-slate-100{border-color:var(--color-slate-100)}.border-slate-300{border-color:var(--color-slate-300)}.border-slate-700{border-color:var(--color-slate-700)}.border-slate-800{border-color:var(--color-slate-800)}.border-transparent{border-color:#0000}.border-white{border-color:var(--color-white)}.bg-amber-100{background-color:var(--color-amber-100)}.bg-amber-500{background-color:var(--color-amber-500)}.bg-slate-50{background-color:var(--color-slate-50)}.bg-slate-100{background-color:var(--color-slate-100)}.bg-slate-200{background-color:var(--color-slate-200)}.bg-slate-700\/50{background-color:#31415880}@supports (color:color-mix(in lab, red, red)){.bg-slate-700\/50{background-color:color-mix(in oklab, var(--color-slate-700) 50%, transparent)}}.bg-slate-800{background-color:var(--color-slate-800)}.bg-slate-900{background-color:var(--color-slate-900)}.bg-slate-900\/70{background-color:#0f172bb3}@supports (color:color-mix(in lab, red, red)){.bg-slate-900\/70{background-color:color-mix(in oklab, var(--color-slate-900) 70%, transparent)}}.bg-slate-900\/95{background-color:#0f172bf2}@supports (color:color-mix(in lab, red, red)){.bg-slate-900\/95{background-color:color-mix(in oklab, var(--color-slate-900) 95%, transparent)}}.bg-transparent{background-color:#0000}.bg-white{background-color:var(--color-white)}.object-cover{object-fit:cover}.p-3{padding:calc(var(--spacing) * 3)}.p-6{padding:calc(var(--spacing) * 6)}.p-8{padding:calc(var(--spacing) * 8)}.px-2{padding-inline:calc(var(--spacing) * 2)}.px-3{padding-inline:calc(var(--spacing) * 3)}.px-4{padding-inline:calc(var(--spacing) * 4)}.px-8{padding-inline:calc(var(--spacing) * 8)}.py-1{padding-block:calc(var(--spacing) * 1)}.py-2{padding-block:calc(var(--spacing) * 2)}.py-3{padding-block:calc(var(--spacing) * 3)}.py-4{padding-block:calc(var(--spacing) * 4)}.py-12{padding-block:calc(var(--spacing) * 12)}.py-20{padding-block:calc(var(--spacing) * 20)}.pt-2{padding-top:calc(var(--spacing) * 2)}.pt-8{padding-top:calc(var(--spacing) * 8)}.pb-3{padding-bottom:calc(var(--spacing) * 3)}.text-center{text-align:center}.font-heading{font-family:var(--font-heading)}.font-sans{font-family:var(--font-sans)}.text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-4xl{font-size:var(--text-4xl);line-height:var(--tw-leading,var(--text-4xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.leading-tight{--tw-leading:var(--leading-tight);line-height:var(--leading-tight)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-light{--tw-font-weight:var(--font-weight-light);font-weight:var(--font-weight-light)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-wide{--tw-tracking:var(--tracking-wide);letter-spacing:var(--tracking-wide)}.tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}.text-amber-500{color:var(--color-amber-500)}.text-amber-600{color:var(--color-amber-600)}.text-slate-200{color:var(--color-slate-200)}.text-slate-300{color:var(--color-slate-300)}.text-slate-400{color:var(--color-slate-400)}.text-slate-600{color:var(--color-slate-600)}.text-slate-700{color:var(--color-slate-700)}.text-slate-800{color:var(--color-slate-800)}.text-slate-900{color:var(--color-slate-900)}.text-white{color:var(--color-white)}.uppercase{text-transform:uppercase}.opacity-10{opacity:.1}.mix-blend-multiply{mix-blend-mode:multiply}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a), 0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(var(--blur-sm));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-shadow{transition-property:box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-300{--tw-duration:.3s;transition-duration:.3s}.outline-none{--tw-outline-style:none;outline-style:none}@media (hover:hover){.group-hover\:scale-110:is(:where(.group):hover *){--tw-scale-x:110%;--tw-scale-y:110%;--tw-scale-z:110%;scale:var(--tw-scale-x) var(--tw-scale-y)}.hover\:-translate-y-1:hover{--tw-translate-y:calc(var(--spacing) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.hover\:border-amber-500:hover{border-color:var(--color-amber-500)}.hover\:bg-amber-400:hover{background-color:var(--color-amber-400)}.hover\:bg-amber-500:hover{background-color:var(--color-amber-500)}.hover\:bg-slate-700:hover{background-color:var(--color-slate-700)}.hover\:bg-slate-800:hover{background-color:var(--color-slate-800)}.hover\:bg-white:hover{background-color:var(--color-white)}.hover\:text-amber-400:hover{color:var(--color-amber-400)}.hover\:text-amber-500:hover{color:var(--color-amber-500)}.hover\:text-amber-700:hover{color:var(--color-amber-700)}.hover\:text-slate-900:hover{color:var(--color-slate-900)}.hover\:text-white:hover{color:var(--color-white)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a), 0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}}.focus\:border-transparent:focus{border-color:#0000}.focus\:ring-2:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus\:ring-amber-500:focus{--tw-ring-color:var(--color-amber-500)}.focus\:outline-none:focus{--tw-outline-style:none;outline-style:none}@media (min-width:40rem){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:px-3{padding-inline:calc(var(--spacing) * 3)}.sm\:px-6{padding-inline:calc(var(--spacing) * 6)}}@media (min-width:48rem){.md\:col-span-2{grid-column:span 2/span 2}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.md\:text-4xl{font-size:var(--text-4xl);line-height:var(--tw-leading,var(--text-4xl--line-height))}.md\:text-6xl{font-size:var(--text-6xl);line-height:var(--tw-leading,var(--text-6xl--line-height))}}@media (min-width:64rem){.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:px-8{padding-inline:calc(var(--spacing) * 8)}}}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-tracking{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}
+    </style>
+  </head>
+<body class="min-h-screen bg-white text-slate-700 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-amber-500 rounded-sm flex items-center justify-center">
+                            <span class="text-slate-900 font-bold text-xl font-heading">OA</span>
+                        </div>
+                        <span class="text-white font-bold text-xl tracking-wide font-heading uppercase">Orinoco<span class="text-amber-500">Alliance</span></span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Inicio</a>
+                    <a href="#about" class="text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Quiénes Somos</a>
+                    <a href="#services" class="text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Servicios</a>
+                    <a href="#compliance" class="text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Compliance</a>
+                    <a href="#contact" class="text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Inicio</a>
+                <a href="#about" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Quiénes Somos</a>
+                <a href="#services" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Servicios</a>
+                <a href="#compliance" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Compliance</a>
+                <a href="#contact" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img
+                src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2000"
+                alt="Industrial Refinery"
+                class="w-full h-full object-cover"
+                referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-slate-900/70 mix-blend-multiply"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-heading leading-tight">
+                Soporte local para la <br/>
+                <span class="text-amber-500">energía global</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light">
+                Con ética, sostenibilidad y compliance internacional.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                    href="#contact"
+                    class="bg-amber-500 text-slate-900 px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-amber-400 transition-all transform hover:-translate-y-1 shadow-lg"
+                >
+                    Contáctanos
+                </a>
+                <a
+                    href="#services"
+                    class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-white hover:text-slate-900 transition-all"
+                >
+                    Nuestros Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">Quiénes Somos</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Orinoco Alliance es una firma líder especializada en el sector energético, con una profunda experiencia en <span class="font-bold text-slate-900">hidrocarburos, electricidad e infraestructura industrial</span> en Venezuela.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Combinamos el conocimiento local con estándares internacionales para ofrecer soluciones integrales que impulsan el desarrollo sostenible y la eficiencia operativa de nuestros clientes.
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-600 font-semibold cursor-pointer hover:text-amber-700 transition-colors">
+                        <span>Conoce más sobre nuestra historia</span>
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+                
+                <div class="grid gap-6">
+                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-slate-200 p-3 rounded-full">
+                                <i data-lucide="compass" class="w-8 h-8 text-slate-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 font-heading mb-2">Misión</h3>
+                                <p class="text-slate-600">
+                                    Proveer soluciones energéticas integrales con excelencia operativa, fomentando el desarrollo local y cumpliendo con los más altos estándares éticos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-amber-100 p-3 rounded-full">
+                                <i data-lucide="target" class="w-8 h-8 text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 font-heading mb-2">Visión</h3>
+                                <p class="text-slate-600">
+                                    Ser el referente indiscutible en servicios industriales y energéticos en la región, reconocidos por nuestra integridad y capacidad de ejecución.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">Nuestros Servicios</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto">
+                    Soluciones estratégicas diseñadas para optimizar cada etapa de la cadena de valor energética.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
+                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="handshake" class="w-8 h-8 text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3">Joint Ventures</h3>
+                    <p class="text-slate-600">Alianzas estratégicas para maximizar el potencial de proyectos energéticos.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
+                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="briefcase" class="w-8 h-8 text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3">Asset Management</h3>
+                    <p class="text-slate-600">Gestión integral de activos para optimizar el rendimiento y la vida útil.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
+                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="users" class="w-8 h-8 text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3">Subcontractor Services</h3>
+                    <p class="text-slate-600">Coordinación y supervisión experta de servicios subcontratados.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
+                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="truck" class="w-8 h-8 text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3">Supply Chain Contracts</h3>
+                    <p class="text-slate-600">Soluciones logísticas y de cadena de suministro eficientes y confiables.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
+                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3">Consultoría Técnica</h3>
+                    <p class="text-slate-600">Asesoramiento especializado en aspectos técnicos y financieros.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
+                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="file-text" class="w-8 h-8 text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading mb-3">Asesoría en Licitaciones</h3>
+                    <p class="text-slate-600">Soporte estratégico en procesos de licitación pública y privada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance -->
+    <section id="compliance" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fbbf24 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+                        The Trust Factor
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Compliance & Estándares Internacionales</h2>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                        En Orinoco Alliance, la integridad no es negociable. Operamos bajo estrictos marcos regulatorios internacionales para garantizar seguridad y transparencia en cada operación.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="text-lg">Licencias OFAC (Office of Foreign Assets Control)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="text-lg">ISO 9001: Gestión de Calidad</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="text-lg">ISO 45001: Seguridad y Salud Ocupacional</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="text-lg">ISO 37001: Gestión Antisoborno</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="text-lg">ISO 55001: Gestión de Activos</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-2xl font-bold font-heading mb-6 text-center">Políticas Corporativas</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-slate-700/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-slate-700 transition-colors">
+                            <div class="text-amber-500 mb-3">
+                                <i data-lucide="shield" class="w-6 h-6"></i>
+                            </div>
+                            <span class="font-semibold">Anticorrupción</span>
+                        </div>
+                        <div class="bg-slate-700/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-slate-700 transition-colors">
+                            <div class="text-amber-500 mb-3">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <span class="font-semibold">Antidiscriminación</span>
+                        </div>
+                        <div class="bg-slate-700/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-slate-700 transition-colors">
+                            <div class="text-amber-500 mb-3">
+                                <i data-lucide="lock" class="w-6 h-6"></i>
+                            </div>
+                            <span class="font-semibold">Confidencialidad</span>
+                        </div>
+                        <div class="bg-slate-700/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-slate-700 transition-colors">
+                            <div class="text-amber-500 mb-3">
+                                <i data-lucide="scale" class="w-6 h-6"></i>
+                            </div>
+                            <span class="font-semibold">Ética</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button class="text-amber-500 hover:text-amber-400 font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-2 mx-auto">
+                            Descargar Código de Conducta <i data-lucide="award" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-6">Contáctanos</h2>
+                    <p class="text-slate-600 text-lg mb-8">
+                        Estamos listos para ser su aliado estratégico en Venezuela. Solicite una reunión con nuestros expertos.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-slate-100 p-3 rounded-full">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-slate-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Oficina Principal</h4>
+                                <p class="text-slate-600">Torre Empresarial, Av. Principal, Caracas, Venezuela</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="bg-slate-100 p-3 rounded-full">
+                                <i data-lucide="mail" class="w-6 h-6 text-slate-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Correo Electrónico</h4>
+                                <p class="text-slate-600">contacto@orinocoalliance.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-slate-100 p-3 rounded-full">
+                                <i data-lucide="phone" class="w-6 h-6 text-slate-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Teléfono</h4>
+                                <p class="text-slate-600">+58 212 555 0123</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg border border-slate-100">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nombre Completo</label>
+                            <input
+                                type="text"
+                                id="name"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+                                placeholder="Juan Pérez"
+                            />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Correo Electrónico</label>
+                            <input
+                                type="email"
+                                id="email"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+                                placeholder="juan@empresa.com"
+                            />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Mensaje</label>
+                            <textarea
+                                id="message"
+                                rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
+                                placeholder="¿En qué podemos ayudarle?"
+                            ></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors uppercase tracking-wider shadow-md hover:shadow-lg"
+                        >
+                            Solicita una reunión
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-amber-500 rounded-sm flex items-center justify-center">
+                            <span class="text-slate-900 font-bold text-lg font-heading">OA</span>
+                        </div>
+                        <span class="text-white font-bold text-lg tracking-wide font-heading uppercase">Orinoco<span class="text-amber-500">Alliance</span></span>
+                    </div>
+                    <p class="text-sm max-w-xs">
+                        Soporte local para la energía global. Comprometidos con la excelencia, la ética y el desarrollo sostenible de Venezuela.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-amber-500 transition-colors">Inicio</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition-colors">Quiénes Somos</a></li>
+                        <li><a href="#services" class="hover:text-amber-500 transition-colors">Servicios</a></li>
+                        <li><a href="#compliance" class="hover:text-amber-500 transition-colors">Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Términos de Uso</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition-colors">Código de Ética</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>&copy; <span id="year"></span> Orinoco Alliance. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <!-- Social placeholders -->
+                    <div class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-colors cursor-pointer">
+                        <span class="font-bold">in</span>
+                    </div>
+                    <div class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-colors cursor-pointer">
+                        <span class="font-bold">X</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Update Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            // Toggle icon between menu and x
+            const isHidden = menu.classList.contains('hidden');
+            icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+            lucide.createIcons();
+        });
+
+        // Close menu when clicking a link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
