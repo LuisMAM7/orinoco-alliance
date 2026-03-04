@@ -236,28 +236,66 @@
                         En Orinoco Alliance, la integridad no es negociable. Operamos bajo estrictos marcos regulatorios internacionales para garantizar seguridad y transparencia en cada operación.
                     </p>
                     
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
-                            <span class="text-lg">Licencias OFAC (Office of Foreign Assets Control)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
-                            <span class="text-lg">ISO 9001: Gestión de Calidad</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
-                            <span class="text-lg">ISO 45001: Seguridad y Salud Ocupacional</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
-                            <span class="text-lg">ISO 37001: Gestión Antisoborno</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-amber-500 w-6 h-6 flex-shrink-0"></i>
-                            <span class="text-lg">ISO 55001: Gestión de Activos</span>
-                        </li>
-                    </ul>
+                    <!-- OFAC Highlight Box -->
+                    <div class="bg-slate-800/50 border border-amber-500/30 rounded-xl p-6 mb-10 backdrop-blur-sm relative overflow-hidden group hover:border-amber-500/60 transition-colors shadow-lg">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                            <i data-lucide="globe" class="w-32 h-32 text-amber-500"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="bg-amber-500/10 p-2 rounded-full">
+                                    <i data-lucide="shield-check" class="text-amber-500 w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white font-heading">Licencias OFAC</h3>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed max-w-md">
+                                Operamos en estricto cumplimiento con la <span class="text-amber-400 font-semibold">Office of Foreign Assets Control</span>, garantizando seguridad jurídica y transparencia total en todas nuestras transacciones internacionales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ISO Seals Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                        <!-- ISO 9001 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20 mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-amber-200/20 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <i data-lucide="shield" class="text-slate-900 w-7 h-7 relative z-10"></i>
+                            </div>
+                            <div class="text-white font-bold text-sm tracking-wide">ISO 9001</div>
+                            <div class="text-slate-400 text-xs mt-1 font-medium">Calidad</div>
+                        </div>
+
+                        <!-- ISO 45001 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20 mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-amber-200/20 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <i data-lucide="shield" class="text-slate-900 w-7 h-7 relative z-10"></i>
+                            </div>
+                            <div class="text-white font-bold text-sm tracking-wide">ISO 45001</div>
+                            <div class="text-slate-400 text-xs mt-1 font-medium">Seguridad y Salud</div>
+                        </div>
+
+                        <!-- ISO 37001 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20 mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-amber-200/20 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <i data-lucide="shield" class="text-slate-900 w-7 h-7 relative z-10"></i>
+                            </div>
+                            <div class="text-white font-bold text-sm tracking-wide">ISO 37001</div>
+                            <div class="text-slate-400 text-xs mt-1 font-medium">Antisoborno</div>
+                        </div>
+
+                        <!-- ISO 55001 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20 mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-amber-200/20 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <i data-lucide="shield" class="text-slate-900 w-7 h-7 relative z-10"></i>
+                            </div>
+                            <div class="text-white font-bold text-sm tracking-wide">ISO 55001</div>
+                            <div class="text-slate-400 text-xs mt-1 font-medium">Gestión de Activos</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
@@ -342,7 +380,7 @@
                 </div>
 
                 <div class="bg-slate-50 p-8 rounded-xl shadow-lg border border-slate-100">
-                    <form action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
+                    <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nombre Completo</label>
                             <input
@@ -380,6 +418,15 @@
                             Solicita una reunión
                         </button>
                     </form>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="form-success" class="hidden text-center py-10">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="check" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">¡Gracias por contactarnos!</h3>
+                        <p class="text-slate-600">Hemos recibido su mensaje. Nos pondremos en contacto pronto.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -465,6 +512,48 @@
                 lucide.createIcons();
             });
         });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('form-success');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.innerText;
+
+                // Disable button and show loading state
+                submitButton.disabled = true;
+                submitButton.innerText = 'Enviando...';
+                
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        contactForm.classList.add('hidden');
+                        successMessage.classList.remove('hidden');
+                        lucide.createIcons(); // Initialize icon in success message
+                        contactForm.reset();
+                    } else {
+                        alert('Hubo un problema al enviar el formulario. Por favor intente nuevamente.');
+                        submitButton.disabled = false;
+                        submitButton.innerText = originalButtonText;
+                    }
+                } catch (error) {
+                    alert('Hubo un problema al enviar el formulario. Por favor intente nuevamente.');
+                    submitButton.disabled = false;
+                    submitButton.innerText = originalButtonText;
+                }
+            });
+        }
     </script>
 </body>
 </html>
