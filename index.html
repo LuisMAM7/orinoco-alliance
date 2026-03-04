@@ -342,12 +342,13 @@
                 </div>
 
                 <div class="bg-slate-50 p-8 rounded-xl shadow-lg border border-slate-100">
-                    <form class="space-y-6">
+                    <form action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nombre Completo</label>
                             <input
                                 type="text"
                                 id="name"
+                                name="name"
                                 class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
                                 placeholder="Juan Pérez"
                             />
@@ -357,6 +358,7 @@
                             <input
                                 type="email"
                                 id="email"
+                                name="email"
                                 class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
                                 placeholder="juan@empresa.com"
                             />
@@ -365,6 +367,7 @@
                             <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Mensaje</label>
                             <textarea
                                 id="message"
+                                name="message"
                                 rows="4"
                                 class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all"
                                 placeholder="¿En qué podemos ayudarle?"
