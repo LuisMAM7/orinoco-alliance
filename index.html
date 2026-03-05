@@ -63,7 +63,7 @@ html {
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Inicio</a>
-                <a href="#about" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Quiénes Somos</a>
+                <a href="#" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Quiénes Somos</a>
                 <a href="#services" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Servicios</a>
                 <a href="#compliance" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Compliance</a>
                 <a href="#contact" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-amber-500 hover:bg-slate-800 rounded-md">Contacto</a>
@@ -109,7 +109,7 @@ html {
     </section>
 
     <!-- Quiénes Somos -->
-    <section id="about" class="py-20 bg-white">
+    <section id="" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-4">Quiénes Somos</h2>
@@ -506,10 +506,8 @@ html {
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
-
         // Update Year
         document.getElementById('year').textContent = new Date().getFullYear();
-
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -523,7 +521,6 @@ html {
             icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
             lucide.createIcons();
         });
-
         // Close menu when clicking a link
         links.forEach(link => {
             link.addEventListener('click', () => {
@@ -532,7 +529,6 @@ html {
                 lucide.createIcons();
             });
         });
-
         // Contact Form Handling
         const contactForm = document.getElementById('contact-form');
         const successMessage = document.getElementById('form-success');
@@ -574,6 +570,23 @@ html {
                 }
             });
         }
+        // Function to check if a section is in the viewport
+        const revealSections = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(section => {
+                const windowHeight = window.innerHeight;
+                const revealTop = section.getBoundingClientRect().top;
+                const revealPoint = 150; // Trigger animation 150px before the section is fully in view
+        
+                if (revealTop < windowHeight - revealPoint) {
+                    section.classList.add('active');
+                }
+            });
+        };
+        // Listen for the user scrolling
+        window.addEventListener('scroll', revealSections);
+        // Run immediately on page load to catch any sections already visible
+        revealSections();
     </script>
 </body>
 </html>
