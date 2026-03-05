@@ -10,6 +10,19 @@
     <style>
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Top Visibility */
         .scroll-hidden { opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; }
         .scroll-visible { opacity: 1; visibility: visible; }
     </style>
@@ -21,7 +34,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <a href="#home" class="flex items-center gap-2 group hover:scale-105 transition-transform duration-300">
+                <a href="#home" class="flex items-center gap-2 group md:active:scale-95 active:scale-95 transition-transform duration-150">
                     <div class="w-10 h-10 bg-amber-500 rounded-sm flex items-center justify-center">
                         <span class="text-slate-900 font-bold text-xl">OA</span>
                     </div>
@@ -29,12 +42,18 @@
                 </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-1">
+                <div class="hidden md:flex items-center space-x-1">
                     <a href="#about" class="text-slate-300 px-4 py-2 rounded-md hover:text-amber-500 hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Quiénes Somos</a>
                     <a href="#services" class="text-slate-300 px-4 py-2 rounded-md hover:text-amber-500 hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Servicios</a>
                     <a href="#compliance" class="text-slate-300 px-4 py-2 rounded-md hover:text-amber-500 hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Compliance</a>
                     <a href="#gallery" class="text-slate-300 px-4 py-2 rounded-md hover:text-amber-500 hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Excelencia</a>
-                    <a href="#contact" class="text-slate-300 px-4 py-2 rounded-md hover:text-amber-500 hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Contacto</a>
+                    
+                    <!-- WhatsApp Icon (Desktop) -->
+                    <a href="https://wa.me/" target="_blank" class="text-[#25D366] px-3 py-2 rounded-md hover:bg-white/5 transition-all duration-300 ml-2">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    </a>
+
+                    <a href="#contact" class="bg-amber-500 text-slate-900 px-5 py-2 rounded-md font-bold uppercase tracking-wider hover:bg-amber-400 transition-all ml-2">Contacto</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -84,8 +103,8 @@
         </div>
     </section>
 
-    <!-- Quiénes Somos -->
-    <section id="about" class="py-20 bg-white">
+    <!-- Quiénes Somos (Reveal) -->
+    <section id="about" class="py-20 bg-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Quiénes Somos</h2>
@@ -131,8 +150,8 @@
         </div>
     </section>
 
-    <!-- Servicios (Alphabetized) -->
-    <section id="services" class="py-20 bg-slate-50">
+    <!-- Servicios (Reveal) -->
+    <section id="services" class="py-20 bg-slate-50 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nuestros Servicios</h2>
@@ -141,7 +160,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 1. Asesoría en Licitaciones -->
+                <!-- Service Cards -->
                 <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="file-text" class="w-8 h-8 text-amber-500"></i>
@@ -150,7 +169,6 @@
                     <p class="text-slate-600">Soporte estratégico en procesos de licitación pública y privada.</p>
                 </div>
 
-                <!-- 2. Asset Management -->
                 <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="briefcase" class="w-8 h-8 text-amber-500"></i>
@@ -159,7 +177,6 @@
                     <p class="text-slate-600">Gestión integral de activos para optimizar el rendimiento y la vida útil.</p>
                 </div>
 
-                <!-- 3. Consultoría Técnica -->
                 <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="trending-up" class="w-8 h-8 text-amber-500"></i>
@@ -168,7 +185,6 @@
                     <p class="text-slate-600">Asesoramiento especializado en aspectos técnicos y financieros.</p>
                 </div>
 
-                <!-- 4. Joint Ventures -->
                 <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="handshake" class="w-8 h-8 text-amber-500"></i>
@@ -177,7 +193,6 @@
                     <p class="text-slate-600">Alianzas estratégicas para maximizar el potencial de proyectos energéticos.</p>
                 </div>
 
-                <!-- 5. Subcontractor Services -->
                 <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="users" class="w-8 h-8 text-amber-500"></i>
@@ -186,7 +201,6 @@
                     <p class="text-slate-600">Coordinación y supervisión experta de servicios subcontratados.</p>
                 </div>
 
-                <!-- 6. Supply Chain Contracts -->
                 <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-amber-500 group">
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="truck" class="w-8 h-8 text-amber-500"></i>
@@ -223,7 +237,7 @@
                         </p>
                     </div>
 
-                    <!-- ISO Seals Grid (2x2) -->
+                    <!-- ISO Seals Grid -->
                     <div class="grid grid-cols-2 gap-6">
                         <div class="flex flex-col items-center text-center group">
                             <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20 mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-amber-200/20">
@@ -302,12 +316,14 @@
                     <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800" alt="Industrial 2" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors"></div>
                 </div>
+                <!-- Updated Image 3 -->
                 <div class="group relative overflow-hidden rounded-lg h-64">
-                    <img src="https://images.unsplash.com/photo-1535063406552-4404d50e25ad?q=80&w=800" alt="Industrial 3" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
+                    <img src="https://images.unsplash.com/photo-1503676060728-1c00da0962ee" alt="Industrial 3" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors"></div>
                 </div>
+                <!-- Updated Image 4 -->
                 <div class="group relative overflow-hidden rounded-lg h-64 lg:col-span-2">
-                    <img src="https://images.unsplash.com/photo-1565514020176-dbf2277cc16d?q=80&w=1200" alt="Industrial 4" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758" alt="Industrial 4" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors"></div>
                 </div>
                 <div class="group relative overflow-hidden rounded-lg h-64">
@@ -329,10 +345,10 @@
                     </p>
                     
                     <div class="space-y-6">
-                        <!-- Address -->
-                        <a href="https://maps.google.com" target="_blank" class="flex items-start gap-4 group">
+                        <!-- Address (Stacked) -->
+                        <a href="https://maps.google.com" target="_blank" class="flex flex-col items-start gap-2 group">
                             <div class="bg-slate-200 p-3 rounded-full group-hover:bg-amber-500 transition-colors">
-                                <i data-lucide="map-pin" class="w-6 h-6 text-slate-700 group-hover:text-slate-900 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                <i data-lucide="map-pin" class="w-6 h-6 text-slate-700 group-hover:text-slate-900 group-hover:translate-y-1 transition-transform duration-300"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Oficina Principal</h4>
@@ -340,32 +356,34 @@
                             </div>
                         </a>
                         
-                        <!-- Email -->
-                        <a href="mailto:contacto@orinocoalliance.com" class="flex items-start gap-4 group">
+                        <!-- Email (Links on text) -->
+                        <div class="flex items-start gap-4 group">
                             <div class="bg-slate-200 p-3 rounded-full group-hover:bg-amber-500 transition-colors">
                                 <i data-lucide="mail" class="w-6 h-6 text-slate-700 group-hover:text-slate-900 group-hover:opacity-50 transition-opacity duration-300"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Correo Electrónico</h4>
-                                <p class="text-slate-600">contacto@orinocoalliance.com</p>
+                                <a href="mailto:contacto@orinocoalliance.com" class="block text-slate-600 hover:underline">contacto@orinocoalliance.com</a>
+                                <a href="mailto:info@orinocoalliance.com" class="block text-slate-600 hover:underline">info@orinocoalliance.com</a>
                             </div>
-                        </a>
+                        </div>
 
-                        <!-- Phone -->
-                        <a href="tel:+582125550123" class="flex items-start gap-4 group">
+                        <!-- Phone (Links on text) -->
+                        <div class="flex items-start gap-4 group">
                             <div class="bg-slate-200 p-3 rounded-full group-hover:bg-amber-500 transition-colors">
                                 <i data-lucide="phone" class="w-6 h-6 text-slate-700 group-hover:text-slate-900 group-hover:animate-pulse"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Teléfono</h4>
-                                <p class="text-slate-600">+58 212 555 0123</p>
+                                <a href="tel:+582125550123" class="block text-slate-600 hover:underline">+58 212 555 0123</a>
+                                <a href="tel:+582125550124" class="block text-slate-600 hover:underline">+58 212 555 0124</a>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100">
-                    <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
+                    <form id="contact-form" action="#" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nombre Completo</label>
                             <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all" placeholder="Juan Pérez" required />
@@ -425,18 +443,23 @@
                 <p>&copy; <span id="year"></span> Orinoco Alliance. Todos los derechos reservados.</p>
                 <div class="flex gap-4">
                     <div class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-colors cursor-pointer">
-                        <span class="font-bold">in</span>
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
                     </div>
                     <div class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-colors cursor-pointer">
-                        <span class="font-bold">X</span>
+                        <i data-lucide="twitter" class="w-4 h-4"></i>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp (Mobile Only) -->
+    <a href="https://wa.me/" target="_blank" class="md:hidden fixed bottom-4 left-4 bg-[#25D366] text-white p-3 rounded-full shadow-lg z-50 animate-pulse hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+
     <!-- Scroll to Top Button -->
-    <button id="scroll-top-btn" class="fixed bottom-8 right-8 bg-amber-500 text-slate-900 p-3 rounded-full shadow-lg hover:bg-amber-400 transition-all z-50 scroll-hidden" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <button id="scroll-top-btn" class="fixed bottom-4 right-4 bg-amber-500 text-slate-900 p-3 rounded-full shadow-lg hover:bg-amber-400 transition-all z-50 scroll-hidden" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <i data-lucide="arrow-up" class="w-6 h-6"></i>
     </button>
 
@@ -479,6 +502,21 @@
                 scrollBtn.classList.remove('scroll-visible');
             }
         });
+
+        // Scroll Reveal Logic
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+            reveals.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Trigger once on load
     </script>
 </body>
 </html>
