@@ -34,7 +34,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <a href="#home" class="flex items-center gap-2 group md:active:scale-95 active:scale-95 transition-transform duration-150">
+                <a href="#home" class="flex items-center gap-2 group active:scale-95 transition-transform duration-150">
                     <div class="w-10 h-10 bg-amber-500 rounded-sm flex items-center justify-center">
                         <span class="text-slate-900 font-bold text-xl">OA</span>
                     </div>
@@ -49,7 +49,7 @@
                     <a href="#gallery" class="text-slate-300 px-4 py-2 rounded-md hover:text-amber-500 hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Excelencia</a>
                     
                     <!-- WhatsApp Icon (Desktop) - Custom SVG -->
-                    <a href="https://wa.me/" target="_blank" class="px-3 py-2 rounded-md hover:bg-white/5 transition-all duration-300 ml-2 group">
+                    <a href="https://wa.me/51993847942" target="_blank" class="px-3 py-2 rounded-md hover:bg-white/5 transition-all duration-300 ml-2 group">
                         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-[#25D366] group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                         </svg>
@@ -365,8 +365,8 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Correo Electrónico</h4>
-                                <a href="mailto:contacto@orinocoalliance.com" class="block text-slate-600 hover:underline">contacto@orinocoalliance.com</a>
-                                <a href="mailto:info@orinocoalliance.com" class="block text-slate-600 hover:underline">info@orinocoalliance.com</a>
+                                <a href="mailto:luis.abreu@ptsorinocoenergy.com" class="block text-slate-600 hover:underline">luis.abreu@ptsorinocoenergy.com</a>
+                                <a href="mailto:jesus.arenas@ptsorinocoenergy.com" class="block text-slate-600 hover:underline">jesus.arenas@ptsorinocoenergy.com</a>
                             </div>
                         </div>
 
@@ -377,15 +377,15 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Teléfono</h4>
-                                <a href="tel:+582125550123" class="block text-slate-600 hover:underline">+58 212 555 0123</a>
-                                <a href="tel:+582125550124" class="block text-slate-600 hover:underline">+58 212 555 0124</a>
+                                <a href="tel:+51993847942" class="block text-slate-600 hover:underline">+51 993 847 942</a>
+                                <a href="tel:+584248917747" class="block text-slate-600 hover:underline">+58 424 891 7747</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100">
-                    <form id="contact-form" action="#" method="POST" class="space-y-6">
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 relative">
+                    <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nombre Completo</label>
                             <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all" placeholder="Juan Pérez" required />
@@ -401,7 +401,17 @@
                         <button type="submit" class="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors uppercase tracking-wider shadow-md hover:shadow-lg">
                             Solicita una reunión
                         </button>
+                        <div id="form-status" class="text-center text-sm text-red-500 mt-2"></div>
                     </form>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="form-success-message" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="check" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">¡Mensaje Enviado!</h3>
+                        <p class="text-slate-600">Gracias por contactarnos. Le responderemos a la brevedad.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -456,14 +466,14 @@
     </footer>
 
     <!-- Floating WhatsApp (Mobile Only) - Custom SVG -->
-    <a href="https://wa.me/" target="_blank" class="md:hidden fixed bottom-4 left-4 p-3 rounded-full shadow-lg z-50 animate-pulse hover:scale-110 transition-transform group">
+    <a href="https://wa.me/51993847942" target="_blank" class="md:hidden fixed bottom-4 left-4 p-3 rounded-full shadow-lg z-50 animate-pulse hover:scale-110 transition-transform group">
         <svg viewBox="0 0 24 24" class="w-12 h-12 fill-[#25D366] drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
     </a>
 
     <!-- Scroll to Top Button -->
-    <button id="scroll-top-btn" class="fixed bottom-4 right-4 bg-amber-500 text-slate-900 p-3 rounded-full shadow-lg hover:bg-amber-400 transition-all z-50 scroll-hidden" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <button id="scroll-top-btn" class="fixed bottom-4 right-4 bg-amber-500 text-slate-900 p-3 rounded-full shadow-lg hover:bg-amber-400 transition-all z-50 scroll-hidden">
         <i data-lucide="arrow-up" class="w-6 h-6"></i>
     </button>
 
@@ -522,44 +532,103 @@
         window.addEventListener('scroll', revealOnScroll);
         revealOnScroll(); // Trigger once on load
 
-        // Luxurious Smooth Scroll (Desktop)
+        // Luxurious Smooth Scroll (Universal)
+        const smoothScroll = (target, duration) => {
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let start = null;
+
+            window.requestAnimationFrame(step);
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                // EaseInOutCubic
+                const ease = progress / duration < 0.5
+                    ? 4 * progress * progress * progress / (duration * duration * duration)
+                    : 1 - Math.pow(-2 * progress / duration + 2, 3) / 2;
+                
+                window.scrollTo(0, startPosition + distance * ease);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    window.scrollTo(0, targetPosition);
+                }
+            }
+        };
+
+        // Apply to all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                // Only apply custom smooth scroll on desktop (or larger screens)
-                if (window.innerWidth >= 768) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                        const startPosition = window.pageYOffset;
-                        const distance = targetPosition - startPosition;
-                        const duration = 1000; // 1 second for luxurious feel
-                        let start = null;
-
-                        window.requestAnimationFrame(step);
-
-                        function step(timestamp) {
-                            if (!start) start = timestamp;
-                            const progress = timestamp - start;
-                            // EaseInOutCubic
-                            const ease = progress / duration < 0.5
-                                ? 4 * progress * progress * progress / (duration * duration * duration)
-                                : 1 - Math.pow(-2 * progress / duration + 2, 3) / 2;
-                            
-                            window.scrollTo(0, startPosition + distance * ease);
-                            if (progress < duration) {
-                                window.requestAnimationFrame(step);
-                            } else {
-                                window.scrollTo(0, targetPosition);
-                            }
-                        }
-                    }
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    smoothScroll(targetElement, 1000); // 1s duration
                 }
             });
         });
+
+        // Apply to Back to Top Button
+        document.getElementById('scroll-top-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            smoothScroll(document.body, 1000);
+        });
+
+        // Formspree AJAX Handling
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('form-success-message');
+        const status = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    form.style.display = 'none';
+                    successMessage.classList.remove('hidden');
+                    form.reset();
+                    status.innerHTML = "";
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        status.innerHTML = "Oops! Hubo un problema al enviar su formulario";
+                    }
+                }
+            } catch (error) {
+                status.innerHTML = "Oops! Hubo un problema al enviar su formulario";
+            }
+        }
+        
+        form.addEventListener("submit", handleSubmit);
+
+        // Engagement Logic: Reset form on navigation
+        const resetForm = () => {
+            if (!successMessage.classList.contains('hidden')) {
+                successMessage.classList.add('hidden');
+                form.style.display = 'block';
+            }
+        };
+
+        // Listen for clicks on nav links and back-to-top
+        document.querySelectorAll('a, #scroll-top-btn').forEach(el => {
+            el.addEventListener('click', resetForm);
+        });
+
     </script>
 </body>
 </html>
