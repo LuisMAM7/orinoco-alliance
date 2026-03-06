@@ -49,7 +49,7 @@
                     <a href="#gallery" class="text-slate-300 px-4 py-2 rounded-md hover:text-amber-500 hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Excelencia</a>
                     
                     <!-- WhatsApp Icon (Desktop) - Custom SVG -->
-                    <a href="https://wa.me/51993847942" target="_blank" class="px-3 py-2 rounded-md hover:bg-white/5 transition-all duration-300 ml-2 group">
+                    <a href="https://wa.me/51993847942?text=Hola%2C%20necesito%20su%20experiencia%20en%20asesor%C3%ADa%20de%20licitaciones%20y%20consultor%C3%ADa%20t%C3%A9cnica%20en%20mi%20compa%C3%B1%C3%ADa%2C%20estoy%20atento" target="_blank" class="px-3 py-2 rounded-md hover:bg-white/5 transition-all duration-300 ml-2 group">
                         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-[#25D366] group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                         </svg>
@@ -318,12 +318,10 @@
                     <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800" alt="Industrial 2" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors"></div>
                 </div>
-                <!-- Updated Image 3 -->
                 <div class="group relative overflow-hidden rounded-lg h-64">
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" alt="Industrial 3" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors"></div>
                 </div>
-                <!-- Updated Image 4 -->
                 <div class="group relative overflow-hidden rounded-lg h-64 lg:col-span-2">
                     <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758" alt="Industrial 4" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
                     <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors"></div>
@@ -339,7 +337,10 @@
     <!-- Contact Form -->
     <section id="contact" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Mobile: Form First (flex-col-reverse), Desktop: Address First (grid default) -->
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-16">
+                
+                <!-- Address Column -->
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Contáctanos</h2>
                     <p class="text-slate-600 text-lg mb-8">
@@ -358,32 +359,57 @@
                             </div>
                         </a>
                         
-                        <!-- Email (Links on text) -->
+                        <!-- Email (Copy Button, No Mailto) -->
                         <div class="flex items-start gap-4 group">
                             <div class="bg-slate-200 p-3 rounded-full group-hover:bg-amber-500 transition-colors">
                                 <i data-lucide="mail" class="w-6 h-6 text-slate-700 group-hover:text-slate-900 group-hover:opacity-50 transition-opacity duration-300"></i>
                             </div>
-                            <div>
+                            <div class="w-full">
                                 <h4 class="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Correo Electrónico</h4>
-                                <a href="mailto:luis.abreu@ptsorinocoenergy.com" class="block text-slate-600 hover:underline">luis.abreu@ptsorinocoenergy.com</a>
-                                <a href="mailto:jesus.arenas@ptsorinocoenergy.com" class="block text-slate-600 hover:underline">jesus.arenas@ptsorinocoenergy.com</a>
+                                
+                                <div class="flex items-center gap-2 justify-between sm:justify-start mt-1">
+                                    <span class="text-slate-600 active:underline cursor-default break-all">luis.abreu@ptsorinocoenergy.com</span>
+                                    <button onclick="copyToClipboard('luis.abreu@ptsorinocoenergy.com', this)" class="p-1 text-slate-400 hover:text-amber-500 transition-colors" title="Copiar">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+
+                                <div class="flex items-center gap-2 justify-between sm:justify-start mt-1">
+                                    <span class="text-slate-600 active:underline cursor-default break-all">jesus.arenas@ptsorinocoenergy.com</span>
+                                    <button onclick="copyToClipboard('jesus.arenas@ptsorinocoenergy.com', this)" class="p-1 text-slate-400 hover:text-amber-500 transition-colors" title="Copiar">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Phone (Links on text) -->
+                        <!-- Phone (Copy Button, No Tel link on Desktop but keep visual) -->
                         <div class="flex items-start gap-4 group">
                             <div class="bg-slate-200 p-3 rounded-full group-hover:bg-amber-500 transition-colors">
                                 <i data-lucide="phone" class="w-6 h-6 text-slate-700 group-hover:text-slate-900 group-hover:animate-pulse"></i>
                             </div>
-                            <div>
+                            <div class="w-full">
                                 <h4 class="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Teléfono</h4>
-                                <a href="tel:+51993847942" class="block text-slate-600 hover:underline">+51 993 847 942</a>
-                                <a href="tel:+584248917747" class="block text-slate-600 hover:underline">+58 424 891 7747</a>
+                                
+                                <div class="flex items-center gap-2 justify-between sm:justify-start mt-1">
+                                    <span class="text-slate-600 active:underline cursor-default">+51 993 847 942</span>
+                                    <button onclick="copyToClipboard('+51993847942', this)" class="p-1 text-slate-400 hover:text-amber-500 transition-colors" title="Copiar">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+
+                                <div class="flex items-center gap-2 justify-between sm:justify-start mt-1">
+                                    <span class="text-slate-600 active:underline cursor-default">+58 424 891 7747</span>
+                                    <button onclick="copyToClipboard('+584248917747', this)" class="p-1 text-slate-400 hover:text-amber-500 transition-colors" title="Copiar">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Form Column -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 relative">
                     <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
                         <div>
@@ -422,12 +448,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
+                    <!-- Footer Logo with animation -->
+                    <a href="#home" class="flex items-center gap-2 mb-4 group active:scale-95 transition-transform duration-150 w-fit">
                         <div class="w-8 h-8 bg-amber-500 rounded-sm flex items-center justify-center">
                             <span class="text-slate-900 font-bold text-lg">OA</span>
                         </div>
                         <span class="text-white font-bold text-lg tracking-wide uppercase">Orinoco<span class="text-amber-500">Alliance</span></span>
-                    </div>
+                    </a>
                     <p class="text-sm max-w-xs">Soporte local para la energía global. Comprometidos con la excelencia, la ética y el desarrollo sostenible de Venezuela.</p>
                 </div>
                 
@@ -465,8 +492,8 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp (Mobile Only) - Custom SVG -->
-    <a href="https://wa.me/51993847942" target="_blank" class="md:hidden fixed bottom-4 left-4 p-3 rounded-full shadow-lg z-50 animate-pulse hover:scale-110 transition-transform group">
+    <!-- Floating WhatsApp (Mobile Only) - Custom SVG with Message -->
+    <a href="https://wa.me/51993847942?text=Hola%2C%20necesito%20su%20experiencia%20en%20asesor%C3%ADa%20de%20licitaciones%20y%20consultor%C3%ADa%20t%C3%A9cnica%20en%20mi%20compa%C3%B1%C3%ADa%2C%20estoy%20atento" target="_blank" class="md:hidden fixed bottom-4 left-4 p-3 rounded-full shadow-lg z-50 animate-pulse hover:scale-110 transition-transform group">
         <svg viewBox="0 0 24 24" class="w-12 h-12 fill-[#25D366] drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
@@ -577,6 +604,31 @@
             e.preventDefault();
             smoothScroll(document.body, 1000);
         });
+
+        // Copy to Clipboard Function
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                const icon = btn.querySelector('i');
+                // Store original icon name if not already stored
+                if (!btn.dataset.originalIcon) {
+                    btn.dataset.originalIcon = icon.getAttribute('data-lucide');
+                }
+                
+                // Change to check
+                icon.setAttribute('data-lucide', 'check');
+                icon.classList.add('text-green-500');
+                lucide.createIcons();
+                
+                // Revert after 2 seconds
+                setTimeout(() => {
+                    icon.setAttribute('data-lucide', btn.dataset.originalIcon || 'copy');
+                    icon.classList.remove('text-green-500');
+                    lucide.createIcons();
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
 
         // Formspree AJAX Handling
         const form = document.getElementById('contact-form');
