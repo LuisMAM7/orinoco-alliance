@@ -25,6 +25,17 @@
         /* Back to Top Visibility */
         .scroll-hidden { opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; }
         .scroll-visible { opacity: 1; visibility: visible; }
+
+        /* Copy Feedback Animation */
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(5px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-5px); }
+        }
+        .copy-feedback-active {
+            animation: fadeInOut 2s forwards;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -33,7 +44,7 @@
     <nav class="fixed w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Logo -->
+                <!-- Logo with Mobile Tap Animation -->
                 <a href="#home" class="flex items-center gap-2 group active:scale-95 transition-transform duration-150">
                     <div class="w-10 h-10 bg-amber-500 rounded-sm flex items-center justify-center">
                         <span class="text-slate-900 font-bold text-xl">OA</span>
@@ -373,31 +384,33 @@
                                 
                                 <!-- Email 1 -->
                                 <div class="mt-1">
-                                    <!-- Mobile: Mailto Link -->
+                                    <!-- Mobile: Mailto Link with Underscore on Tap -->
                                     <a href="mailto:luis.abreu@ptsorinocoenergy.com" class="md:hidden text-slate-600 hover:underline active:underline break-all">
                                         luis.abreu@ptsorinocoenergy.com
                                     </a>
-                                    <!-- Desktop: Text + Copy Button -->
-                                    <div class="hidden md:flex items-center gap-2 justify-start">
+                                    <!-- Desktop: Text + Copy Button + Feedback -->
+                                    <div class="hidden md:flex items-center gap-2 justify-start relative">
                                         <span class="text-slate-600 hover:underline active:underline cursor-default break-all">luis.abreu@ptsorinocoenergy.com</span>
                                         <button onclick="copyToClipboard('luis.abreu@ptsorinocoenergy.com', this)" class="p-1 text-slate-400 hover:text-amber-500 transition-all transform active:scale-90" title="Copiar">
                                             <i data-lucide="copy" class="w-4 h-4"></i>
                                         </button>
+                                        <span class="copy-feedback text-green-600 text-xs font-bold opacity-0 absolute left-full ml-2 whitespace-nowrap pointer-events-none">¡Copiado con éxito!</span>
                                     </div>
                                 </div>
 
                                 <!-- Email 2 -->
                                 <div class="mt-1">
-                                    <!-- Mobile: Mailto Link -->
+                                    <!-- Mobile: Mailto Link with Underscore on Tap -->
                                     <a href="mailto:jesus.arenas@ptsorinocoenergy.com" class="md:hidden text-slate-600 hover:underline active:underline break-all">
                                         jesus.arenas@ptsorinocoenergy.com
                                     </a>
-                                    <!-- Desktop: Text + Copy Button -->
-                                    <div class="hidden md:flex items-center gap-2 justify-start">
+                                    <!-- Desktop: Text + Copy Button + Feedback -->
+                                    <div class="hidden md:flex items-center gap-2 justify-start relative">
                                         <span class="text-slate-600 hover:underline active:underline cursor-default break-all">jesus.arenas@ptsorinocoenergy.com</span>
                                         <button onclick="copyToClipboard('jesus.arenas@ptsorinocoenergy.com', this)" class="p-1 text-slate-400 hover:text-amber-500 transition-all transform active:scale-90" title="Copiar">
                                             <i data-lucide="copy" class="w-4 h-4"></i>
                                         </button>
+                                        <span class="copy-feedback text-green-600 text-xs font-bold opacity-0 absolute left-full ml-2 whitespace-nowrap pointer-events-none">¡Copiado con éxito!</span>
                                     </div>
                                 </div>
                             </div>
@@ -413,11 +426,11 @@
                                 
                                 <!-- Phone 1 -->
                                 <div class="mt-1">
-                                    <!-- Mobile: Tel Link -->
+                                    <!-- Mobile: Tel Link with Underscore on Tap -->
                                     <a href="tel:+51993847942" class="md:hidden text-slate-600 hover:underline active:underline">
                                         +51 993 847 942
                                     </a>
-                                    <!-- Desktop: Tel Link (New Request) -->
+                                    <!-- Desktop: Tel Link -->
                                     <a href="tel:+51993847942" class="hidden md:block text-slate-600 hover:text-amber-600 hover:underline transition-colors">
                                         +51 993 847 942
                                     </a>
@@ -425,11 +438,11 @@
 
                                 <!-- Phone 2 -->
                                 <div class="mt-1">
-                                    <!-- Mobile: Tel Link -->
+                                    <!-- Mobile: Tel Link with Underscore on Tap -->
                                     <a href="tel:+584248917747" class="md:hidden text-slate-600 hover:underline active:underline">
                                         +58 424 891 7747
                                     </a>
-                                    <!-- Desktop: Tel Link (New Request) -->
+                                    <!-- Desktop: Tel Link -->
                                     <a href="tel:+584248917747" class="hidden md:block text-slate-600 hover:text-amber-600 hover:underline transition-colors">
                                         +58 424 891 7747
                                     </a>
@@ -440,8 +453,8 @@
                 </div>
 
                 <!-- Form Column (Top on Mobile, Right on Desktop) -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 relative">
-                    <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 relative min-h-[450px]">
+                    <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6 h-full flex flex-col justify-between">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nombre Completo</label>
                             <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all" placeholder="Juan Pérez" required />
@@ -461,7 +474,7 @@
                     </form>
                     
                     <!-- Success Message (Hidden by default) -->
-                    <div id="form-success-message" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white rounded-xl p-8 text-center">
+                    <div id="form-success-message" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white rounded-xl p-8 text-center z-10">
                         <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                             <i data-lucide="check" class="w-8 h-8 text-green-600"></i>
                         </div>
@@ -635,10 +648,12 @@
             smoothScroll(document.body, 1000);
         });
 
-        // Copy to Clipboard Function
+        // Copy to Clipboard Function with Enhanced Feedback
         function copyToClipboard(text, btn) {
             navigator.clipboard.writeText(text).then(() => {
                 const icon = btn.querySelector('i');
+                const feedback = btn.nextElementSibling;
+                
                 // Store original icon name if not already stored
                 if (!btn.dataset.originalIcon) {
                     btn.dataset.originalIcon = icon.getAttribute('data-lucide');
@@ -648,6 +663,13 @@
                 icon.setAttribute('data-lucide', 'check');
                 icon.classList.add('text-green-500');
                 lucide.createIcons();
+                
+                // Show feedback message
+                if (feedback && feedback.classList.contains('copy-feedback')) {
+                    feedback.classList.remove('copy-feedback-active'); // Reset animation
+                    void feedback.offsetWidth; // Trigger reflow
+                    feedback.classList.add('copy-feedback-active');
+                }
                 
                 // Revert after 2 seconds
                 setTimeout(() => {
@@ -702,7 +724,7 @@
         const resetForm = () => {
             if (!successMessage.classList.contains('hidden')) {
                 successMessage.classList.add('hidden');
-                form.style.display = 'block';
+                form.style.display = 'flex'; // Restore to flex (as per class)
             }
         };
 
