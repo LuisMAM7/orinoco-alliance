@@ -10,7 +10,7 @@
     <style>
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-        
+       
         /* Scroll Reveal Animation */
         .reveal {
             opacity: 0;
@@ -46,19 +46,47 @@
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo with Mobile Tap Animation -->
                 <a href="#home" class="flex items-center gap-2 group active:scale-95 transition-transform duration-150">
-                    <div class="w-10 h-10 bg-[#39D87E] rounded-sm flex items-center justify-center">
-                        <span class="text-[#204788] font-bold text-xl">OA</span>
-                    </div>
+                    <!-- Sol del Orinoco SVG Logo -->
+                    <svg viewBox="0 0 100 100" class="w-10 h-10 fill-[#39D87E] group-hover:rotate-180 transition-transform duration-1000 ease-in-out" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(50, 50)">
+                            <defs>
+                                <!-- Single blade/ray representing energy flow -->
+                                <path id="blade" d="M 8,-14 Q 15,-28 17,-40 L 27,-34 Q 23,-22 17,-10 Z" />
+                            </defs>
+                            <!-- 21 Radial Elements (360 / 21 = 17.14 degrees) -->
+                            <use href="#blade" transform="rotate(0)" />
+                            <use href="#blade" transform="rotate(17.14)" />
+                            <use href="#blade" transform="rotate(34.29)" />
+                            <use href="#blade" transform="rotate(51.43)" />
+                            <use href="#blade" transform="rotate(68.57)" />
+                            <use href="#blade" transform="rotate(85.71)" />
+                            <use href="#blade" transform="rotate(102.86)" />
+                            <use href="#blade" transform="rotate(120)" />
+                            <use href="#blade" transform="rotate(137.14)" />
+                            <use href="#blade" transform="rotate(154.29)" />
+                            <use href="#blade" transform="rotate(171.43)" />
+                            <use href="#blade" transform="rotate(188.57)" />
+                            <use href="#blade" transform="rotate(205.71)" />
+                            <use href="#blade" transform="rotate(222.86)" />
+                            <use href="#blade" transform="rotate(240)" />
+                            <use href="#blade" transform="rotate(257.14)" />
+                            <use href="#blade" transform="rotate(274.29)" />
+                            <use href="#blade" transform="rotate(291.43)" />
+                            <use href="#blade" transform="rotate(308.57)" />
+                            <use href="#blade" transform="rotate(325.71)" />
+                            <use href="#blade" transform="rotate(342.86)" />
+                        </g>
+                    </svg>
                     <span class="text-white font-bold text-xl tracking-wide uppercase">Orinoco<span class="text-[#39D87E]">Alliance</span></span>
                 </a>
-                
+               
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="#about" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Quiénes Somos</a>
                     <a href="#services" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Servicios</a>
                     <a href="#compliance" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Compliance</a>
                     <a href="#gallery" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Excelencia</a>
-                    
+                   
                     <!-- WhatsApp Icon (Desktop) - Custom SVG -->
                     <a href="https://wa.me/51993847942?text=Hola%2C%20estoy%20interesado%20en%20recibir%20consultor%C3%ADa%20t%C3%A9cnica%20y%20apoyo%20en%20procesos%20de%20licitaci%C3%B3n." target="_blank" class="px-3 py-2 rounded-md hover:bg-white/5 transition-all duration-300 ml-2 group">
                         <svg viewBox="0 0 24 24" class="w-6 h-6 fill-[#25D366] group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg">
@@ -89,14 +117,14 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9" alt="Refinería de Amuay - Venezuela" class="w-full h-full object-cover" referrerpolicy="no-referrer" />
             <div class="absolute inset-0 bg-[#204788]/70 mix-blend-multiply"></div>
         </div>
-        
+       
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Soporte local para la <br/>
@@ -133,7 +161,7 @@
                         Combinamos el conocimiento local con estándares internacionales para ofrecer soluciones integrales que impulsan el desarrollo sostenible y la eficiencia operativa de nuestros clientes.
                     </p>
                 </div>
-                
+               
                 <div class="grid gap-6">
                     <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#39D87E] shadow-sm hover:shadow-md transition-shadow">
                         <div class="flex items-start gap-4">
@@ -202,7 +230,7 @@
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="handshake" class="w-8 h-8 text-[#39D87E]"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3">Joint Ventures</h3>
+                    <h3 class="text-xl font-bold text-[#204788] mb-3">Alianzas Estratégicas</h3>
                     <p class="text-slate-600">Alianzas estratégicas para maximizar el potencial de proyectos energéticos.</p>
                 </div>
 
@@ -210,7 +238,7 @@
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="users" class="w-8 h-8 text-[#39D87E]"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3">Subcontractor Services</h3>
+                    <h3 class="text-xl font-bold text-[#204788] mb-3">Servicios de Subcontratación</h3>
                     <p class="text-slate-600">Coordinación y supervisión experta de servicios subcontratados.</p>
                 </div>
 
@@ -218,7 +246,7 @@
                     <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
                         <i data-lucide="truck" class="w-8 h-8 text-[#39D87E]"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3">Supply Chain Contracts</h3>
+                    <h3 class="text-xl font-bold text-[#204788] mb-3">Contratos de Cadena de Suministro</h3>
                     <p class="text-slate-600">Soluciones logísticas y de cadena de suministro eficientes y confiables.</p>
                 </div>
             </div>
@@ -228,7 +256,7 @@
     <!-- Compliance -->
     <section id="compliance" class="py-20 bg-[#3F3F3F] text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#39D87E 1px, transparent 1px); background-size: 30px 30px;"></div>
-        
+       
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -237,7 +265,7 @@
                     <p class="text-slate-300 text-lg mb-8 leading-relaxed">
                         En Orinoco Alliance, la integridad no es negociable. Operamos bajo estrictos marcos regulatorios internacionales para garantizar seguridad y transparencia en cada operación.
                     </p>
-                    
+                   
                     <div class="bg-[#204788]/50 border border-[#39D87E]/30 rounded-xl p-6 mb-10 backdrop-blur-sm relative overflow-hidden group hover:border-[#39D87E]/60 transition-colors shadow-lg">
                         <div class="flex items-center gap-3 mb-3">
                             <div class="bg-[#39D87E]/10 p-2 rounded-full">
@@ -319,7 +347,7 @@
                 <div class="w-24 h-1 bg-[#39D87E] mx-auto mb-6"></div>
                 <p class="text-slate-600 max-w-2xl mx-auto">Infraestructura y tecnología de vanguardia al servicio de la industria.</p>
             </div>
-            
+           
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="group relative overflow-hidden rounded-lg h-64">
                     <img src="https://lh3.googleusercontent.com/d/1hZVGstBk1jrUjxSSJXnE9M5i4Z8Xd_ZQ" alt="Equipo de ingenieros" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
@@ -359,7 +387,7 @@
 
             <!-- Mobile: Form First (flex-col-reverse), Desktop: Address First (grid default) -->
             <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-16">
-                
+               
                 <!-- Address Column (Bottom on Mobile, Left on Desktop) -->
                 <div>
                     <div class="space-y-6">
@@ -373,7 +401,7 @@
                                 <p class="text-slate-600">Torre Empresarial, Av. Principal, Caracas, Venezuela</p>
                             </div>
                         </a>
-                        
+                       
                         <!-- Email -->
                         <div class="flex items-start gap-4 group">
                             <div class="bg-slate-200 p-3 rounded-full group-hover:bg-[#39D87E] transition-colors">
@@ -381,7 +409,7 @@
                             </div>
                             <div class="w-full">
                                 <h4 class="font-bold text-[#204788] group-hover:text-[#39D87E] transition-colors">Correo Electrónico</h4>
-                                
+                               
                                 <!-- Email 1 -->
                                 <div class="mt-1">
                                     <!-- Mobile: Mailto Link with Underscore on Tap -->
@@ -423,7 +451,7 @@
                             </div>
                             <div class="w-full">
                                 <h4 class="font-bold text-[#204788] group-hover:text-[#39D87E] transition-colors">Teléfono</h4>
-                                
+                               
                                 <!-- Phone 1 -->
                                 <div class="mt-1">
                                     <!-- Mobile: Tel Link with Underscore on Tap -->
@@ -472,7 +500,7 @@
                         </button>
                         <div id="form-status" class="text-center text-sm text-red-500 mt-2"></div>
                     </form>
-                    
+                   
                     <!-- Success Message (Hidden by default) -->
                     <div id="form-success-message" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white rounded-xl p-8 text-center z-10">
                         <div class="w-16 h-16 bg-[#39D87E]/20 rounded-full flex items-center justify-center mb-4">
@@ -493,14 +521,40 @@
                 <div class="col-span-1 md:col-span-2">
                     <!-- Footer Logo with animation -->
                     <a href="#home" class="flex items-center gap-2 mb-4 group active:scale-95 transition-transform duration-150 w-fit">
-                        <div class="w-8 h-8 bg-[#39D87E] rounded-sm flex items-center justify-center">
-                            <span class="text-[#204788] font-bold text-lg">OA</span>
-                        </div>
+                        <!-- Sol del Orinoco SVG Logo -->
+                        <svg viewBox="0 0 100 100" class="w-8 h-8 fill-[#39D87E] group-hover:rotate-180 transition-transform duration-1000 ease-in-out" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(50, 50)">
+                                <defs>
+                                    <path id="blade-footer" d="M 8,-14 Q 15,-28 17,-40 L 27,-34 Q 23,-22 17,-10 Z" />
+                                </defs>
+                                <use href="#blade-footer" transform="rotate(0)" />
+                                <use href="#blade-footer" transform="rotate(17.14)" />
+                                <use href="#blade-footer" transform="rotate(34.29)" />
+                                <use href="#blade-footer" transform="rotate(51.43)" />
+                                <use href="#blade-footer" transform="rotate(68.57)" />
+                                <use href="#blade-footer" transform="rotate(85.71)" />
+                                <use href="#blade-footer" transform="rotate(102.86)" />
+                                <use href="#blade-footer" transform="rotate(120)" />
+                                <use href="#blade-footer" transform="rotate(137.14)" />
+                                <use href="#blade-footer" transform="rotate(154.29)" />
+                                <use href="#blade-footer" transform="rotate(171.43)" />
+                                <use href="#blade-footer" transform="rotate(188.57)" />
+                                <use href="#blade-footer" transform="rotate(205.71)" />
+                                <use href="#blade-footer" transform="rotate(222.86)" />
+                                <use href="#blade-footer" transform="rotate(240)" />
+                                <use href="#blade-footer" transform="rotate(257.14)" />
+                                <use href="#blade-footer" transform="rotate(274.29)" />
+                                <use href="#blade-footer" transform="rotate(291.43)" />
+                                <use href="#blade-footer" transform="rotate(308.57)" />
+                                <use href="#blade-footer" transform="rotate(325.71)" />
+                                <use href="#blade-footer" transform="rotate(342.86)" />
+                            </g>
+                        </svg>
                         <span class="text-white font-bold text-lg tracking-wide uppercase">Orinoco<span class="text-[#39D87E]">Alliance</span></span>
                     </a>
                     <p class="text-sm max-w-xs">Soporte local para la energía global. Comprometidos con la excelencia, la ética y el desarrollo sostenible de Venezuela.</p>
                 </div>
-                
+               
                 <div>
                     <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces</h4>
                     <ul class="space-y-2 text-sm">
@@ -520,17 +574,18 @@
                     </ul>
                 </div>
             </div>
-            
+           
             <div class="border-t border-[#3F3F3F] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                <p>&copy; <span id="year"></span> Orinoco Alliance. Todos los derechos reservados.</p>
+                <div class="flex flex-col gap-2 text-center md:text-left">
+                    <p class="text-slate-400">Créditos fotográficos: Refinería de Amuay por Luisovalles; Río Orinoco por Inti (bajo licencia Creative Commons).</p>
+                    <p>&copy; <span id="year"></span> Orinoco Alliance. RIF: [PENDIENTE]. Todos los derechos reservados.</p>
+                </div>
                 <div class="flex gap-4">
                     <div class="w-8 h-8 bg-[#3F3F3F] rounded-full flex items-center justify-center hover:bg-[#39D87E] hover:text-[#204788] transition-colors cursor-pointer">
                         <i data-lucide="linkedin" class="w-4 h-4"></i>
                     </div>
                     <div class="w-8 h-8 bg-[#3F3F3F] rounded-full flex items-center justify-center hover:bg-[#39D87E] hover:text-[#204788] transition-colors cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
+                        <i data-lucide="twitter" class="w-4 h-4"></i>
                     </div>
                 </div>
             </div>
@@ -552,10 +607,10 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
-        
+       
         // Update Year
         document.getElementById('year').textContent = new Date().getFullYear();
-        
+       
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -620,7 +675,7 @@
                 const ease = progress / duration < 0.5
                     ? 4 * progress * progress * progress / (duration * duration * duration)
                     : 1 - Math.pow(-2 * progress / duration + 2, 3) / 2;
-                
+               
                 window.scrollTo(0, startPosition + distance * ease);
                 if (progress < duration) {
                     window.requestAnimationFrame(step);
@@ -637,7 +692,7 @@
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
-                
+               
                 if (targetElement) {
                     smoothScroll(targetElement, 1000); // 1s duration
                 }
@@ -655,24 +710,24 @@
             navigator.clipboard.writeText(text).then(() => {
                 const icon = btn.querySelector('i');
                 const feedback = btn.nextElementSibling;
-                
+               
                 // Store original icon name if not already stored
                 if (!btn.dataset.originalIcon) {
                     btn.dataset.originalIcon = icon.getAttribute('data-lucide');
                 }
-                
+               
                 // Change to check
                 icon.setAttribute('data-lucide', 'check');
                 icon.classList.add('text-[#39D87E]');
                 lucide.createIcons();
-                
+               
                 // Show feedback message
                 if (feedback && feedback.classList.contains('copy-feedback')) {
                     feedback.classList.remove('copy-feedback-active'); // Reset animation
                     void feedback.offsetWidth; // Trigger reflow
                     feedback.classList.add('copy-feedback-active');
                 }
-                
+               
                 // Revert after 2 seconds
                 setTimeout(() => {
                     icon.setAttribute('data-lucide', btn.dataset.originalIcon || 'copy');
@@ -692,7 +747,7 @@
         async function handleSubmit(event) {
             event.preventDefault();
             const data = new FormData(event.target);
-            
+           
             try {
                 const response = await fetch(event.target.action, {
                     method: form.method,
@@ -701,7 +756,7 @@
                         'Accept': 'application/json'
                     }
                 });
-                
+               
                 if (response.ok) {
                     form.style.display = 'none';
                     successMessage.classList.remove('hidden');
@@ -719,7 +774,7 @@
                 status.innerHTML = "Oops! Hubo un problema al enviar su formulario";
             }
         }
-        
+       
         form.addEventListener("submit", handleSubmit);
 
         // Engagement Logic: Reset form on navigation
