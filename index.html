@@ -3,720 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orinoco Alliance</title>
+    <title>Orinoco Alliance | Energy Services</title>
 
-    <meta name="description" content="Orinoco Alliance Energy Services - Leading energy firm in Venezuela specializing in hydrocarbons, electricity, and industrial infrastructure.">
-    <meta name="keywords" content="Energy, Venezuela, Hydrocarbons, Electricity, Asset Management, Compliance, OFAC">
+    <meta name="description" content="Orinoco Alliance Energy Services - Leading energy firm in Venezuela. Hydrocarbons, electricity, and industrial infrastructure.">
     <meta property="og:title" content="Orinoco Alliance | Local Support for Global Energy">
     <meta property="og:description" content="Operational excellence and international compliance in the Venezuelan energy sector.">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b5/Refiner%C3%ADa_de_Amuay.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://googleusercontent.com/profile/picture/2">
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
         body { font-family: 'Open Sans', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-       
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-hidden { opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .scroll-hidden { opacity: 0; visibility: hidden; transition: all 0.3s; }
         .scroll-visible { opacity: 1; visibility: visible; }
-
-        @keyframes fadeInOut {
-            0% { opacity: 0; transform: translateY(5px); }
-            10% { opacity: 1; transform: translateY(0); }
-            90% { opacity: 1; transform: translateY(0); }
-            100% { opacity: 0; transform: translateY(-5px); }
-        }
-        .copy-feedback-active {
-            animation: fadeInOut 2s forwards;
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .animate-fade { animation: fadeIn 0.5s ease-in-out; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
-    <nav class="fixed w-full bg-[#204788]/95 backdrop-blur-sm z-50 border-b border-[#204788]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <a href="#home" class="flex items-center gap-2 group active:scale-95 transition-transform duration-150">
-                    <svg viewBox="0 0 100 100" class="w-10 h-10 fill-[#39D87E] group-hover:rotate-180 transition-transform duration-1000 ease-in-out" xmlns="http://www.w3.org/2000/svg">
-                        <g transform="translate(50, 50)">
-                            <defs><path id="blade" d="M 8,-14 Q 15,-28 17,-40 L 27,-34 Q 23,-22 17,-10 Z" /></defs>
-                            <use href="#blade" transform="rotate(0)" /><use href="#blade" transform="rotate(17.14)" /><use href="#blade" transform="rotate(34.29)" />
-                            <use href="#blade" transform="rotate(51.43)" /><use href="#blade" transform="rotate(68.57)" /><use href="#blade" transform="rotate(85.71)" />
-                            <use href="#blade" transform="rotate(102.86)" /><use href="#blade" transform="rotate(120)" /><use href="#blade" transform="rotate(137.14)" />
-                            <use href="#blade" transform="rotate(154.29)" /><use href="#blade" transform="rotate(171.43)" /><use href="#blade" transform="rotate(188.57)" />
-                            <use href="#blade" transform="rotate(205.71)" /><use href="#blade" transform="rotate(222.86)" /><use href="#blade" transform="rotate(240)" />
-                            <use href="#blade" transform="rotate(257.14)" /><use href="#blade" transform="rotate(274.29)" /><use href="#blade" transform="rotate(291.43)" />
-                            <use href="#blade" transform="rotate(308.57)" /><use href="#blade" transform="rotate(325.71)" /><use href="#blade" transform="rotate(342.86)" />
+    <nav class="fixed w-full bg-[#204788]/95 backdrop-blur-md z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-3 group active:scale-95 transition-transform">
+                <div id="logo-container" class="w-12 h-12">
+                    <svg viewBox="0 0 100 100" class="w-full h-full fill-[#39D87E] group-hover:rotate-90 transition-transform duration-1000">
+                        <g transform="translate(50,50)">
+                            <defs><path id="ray" d="M 5,-10 Q 10,-25 12,-35 L 20,-30 Q 18,-15 12,-5 Z" /></defs>
+                            <script>
+                                for(let i=0; i<21; i++) {
+                                    document.write(`<use href="#ray" transform="rotate(${i * (360/21)})" />`);
+                                }
+                            </script>
                         </g>
                     </svg>
-                    <span class="text-white font-bold text-xl tracking-wide uppercase">Orinoco<span class="text-[#39D87E]">Alliance</span></span>
-                </a>
-               
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="#about" data-i18n="nav-about" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Quiénes Somos</a>
-                    <a href="#services" data-i18n="nav-services" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Servicios</a>
-                    <a href="#compliance" data-i18n="nav-compliance" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Compliance</a>
-                    <a href="#gallery" data-i18n="nav-excellence" class="text-slate-300 px-4 py-2 rounded-md hover:text-[#39D87E] hover:bg-white/5 transition-all duration-300 text-sm font-semibold uppercase tracking-wider">Excelencia</a>
-                   
-                    <a href="https://wa.me/51993847942" id="wa-desktop-link" target="_blank" class="px-3 py-2 rounded-md hover:bg-white/5 transition-all duration-300 ml-2 group">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-[#25D366] group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
-                    </a>
+                </div>
+                <span class="text-white font-bold text-xl tracking-tight uppercase">Orinoco<span class="text-[#39D87E]">Alliance</span></span>
+            </a>
 
-                    <a href="#contact" data-i18n="nav-contact" class="bg-[#39D87E] text-[#204788] px-5 py-2 rounded-md font-bold uppercase tracking-wider hover:bg-[#39D87E]/90 transition-all ml-2">Contacto</a>
-
-                    <div class="relative ml-4" id="desktop-lang-switcher">
-                        <button id="desktop-lang-btn" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-3 py-2 rounded-md transition-all border border-[#39D87E]/30 focus:outline-none">
-                            <span id="desktop-current-flag-container" class="flex items-center"></span>
-                            <span id="desktop-current-lang" class="font-bold text-sm">ES</span>
-                            <i data-lucide="chevron-down" class="w-4 h-4 text-[#39D87E] transition-transform duration-200" id="desktop-lang-chevron"></i>
-                        </button>
-                        <div id="desktop-lang-dropdown" class="absolute right-0 mt-2 w-36 bg-[#204788] border border-[#39D87E]/30 rounded-md shadow-xl hidden flex-col overflow-hidden z-50">
-                            <button class="lang-option flex items-center gap-3 px-4 py-3 hover:bg-[#39D87E] hover:text-[#204788] text-white transition-colors text-left w-full text-sm font-semibold" data-lang="en">
-                                <span class="flag-icon-en"></span> English
-                            </button>
-                            <button class="lang-option flex items-center gap-3 px-4 py-3 hover:bg-[#39D87E] hover:text-[#204788] text-white transition-colors text-left w-full text-sm font-semibold hidden" data-lang="es">
-                                <span class="flag-icon-es"></span> Español
-                            </button>
-                        </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" data-i18n="nav-about" class="text-slate-200 hover:text-[#39D87E] font-semibold text-sm uppercase">Quiénes Somos</a>
+                <a href="#services" data-i18n="nav-services" class="text-slate-200 hover:text-[#39D87E] font-semibold text-sm uppercase">Servicios</a>
+                <a href="#compliance" data-i18n="nav-compliance" class="text-slate-200 hover:text-[#39D87E] font-semibold text-sm uppercase">Compliance</a>
+                
+                <div class="relative group" id="lang-switcher">
+                    <button id="lang-btn" class="flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full text-white text-sm font-bold">
+                        <span id="current-flag"></span> <span id="current-lang-code">ES</span>
+                    </button>
+                    <div id="lang-dropdown" class="absolute right-0 mt-2 w-32 bg-[#204788] border border-white/10 rounded-lg shadow-2xl hidden flex-col overflow-hidden">
+                        <button class="flex items-center gap-3 px-4 py-2 hover:bg-[#39D87E] hover:text-[#204788] text-white text-xs font-bold transition-colors" onclick="changeLanguage('es')">🇪🇸 ESPAÑOL</button>
+                        <button class="flex items-center gap-3 px-4 py-2 hover:bg-[#39D87E] hover:text-[#204788] text-white text-xs font-bold transition-colors" onclick="changeLanguage('en')">🇺🇸 ENGLISH</button>
                     </div>
                 </div>
-
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
+                
+                <a href="#contact" data-i18n="nav-contact" class="bg-[#39D87E] text-[#204788] px-5 py-2 rounded-md font-bold text-sm uppercase shadow-lg hover:brightness-110 transition-all">Contacto</a>
             </div>
+
+            <button id="mobile-btn" class="md:hidden text-white"><i data-lucide="menu"></i></button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-[#204788] border-t border-[#204788]">
-            <div class="px-4 py-4 border-b border-[#39D87E]/20 mb-2 flex justify-center gap-4 bg-[#204788]/50">
-                <button class="mobile-lang-btn active flex items-center gap-2 px-5 py-2 rounded-full font-bold text-sm transition-all" data-lang="es">
-                    <span class="flag-icon-es"></span> ES
-                </button>
-                <button class="mobile-lang-btn flex items-center gap-2 px-5 py-2 rounded-full font-bold text-sm transition-all" data-lang="en">
-                    <span class="flag-icon-en"></span> EN
-                </button>
+        <div id="mobile-menu" class="hidden bg-[#204788] p-6 space-y-4 border-t border-white/10">
+            <div class="flex gap-4 mb-4">
+                <button onclick="changeLanguage('es')" class="px-4 py-2 bg-[#39D87E] text-[#204788] rounded-full font-bold text-xs">ES</button>
+                <button onclick="changeLanguage('en')" class="px-4 py-2 bg-white/10 text-white rounded-full font-bold text-xs">EN</button>
             </div>
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" data-i18n="nav-about" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Quiénes Somos</a>
-                <a href="#services" data-i18n="nav-services" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Servicios</a>
-                <a href="#compliance" data-i18n="nav-compliance" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Compliance</a>
-                <a href="#gallery" data-i18n="nav-excellence" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Excelencia</a>
-                <a href="#contact" data-i18n="nav-contact" class="mobile-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-[#39D87E] hover:bg-[#3F3F3F] rounded-md">Contacto</a>
-            </div>
+            <a href="#about" data-i18n="nav-about" class="block text-white font-bold py-2 border-b border-white/5">Quiénes Somos</a>
+            <a href="#services" data-i18n="nav-services" class="block text-white font-bold py-2 border-b border-white/5">Servicios</a>
+            <a href="#contact" data-i18n="nav-contact" class="block text-[#39D87E] font-bold py-2">Contacto</a>
         </div>
     </nav>
 
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0 z-0">
-            <img src="https://googleusercontent.com/profile/picture/2" alt="Modern Energy Refinery - Orinoco Alliance" class="w-full h-full object-cover" referrerpolicy="no-referrer" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Refiner%C3%ADa_de_Amuay.jpg" class="w-full h-full object-cover" alt="Amuay Refinery">
             <div class="absolute inset-0 bg-[#204788]/70 mix-blend-multiply"></div>
         </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span data-i18n="hero-title-1">Soporte local para la</span> <br/>
-                <span class="text-[#39D87E]" data-i18n="hero-title-2">energía global</span>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                <span data-i18n="hero-t1">Soporte local para la</span><br/>
+                <span class="text-[#39D87E]" data-i18n="hero-t2">energía global</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-200 mb-10 max-w-3xl mx-auto font-light" data-i18n="hero-subtitle">Con ética, sostenibilidad y compliance internacional.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" data-i18n="hero-btn-contact" class="bg-[#39D87E] text-[#204788] px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-[#39D87E]/90 transition-all transform hover:-translate-y-1 shadow-lg">Contáctanos</a>
-                <a href="#services" data-i18n="hero-btn-services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider hover:bg-white hover:text-[#204788] transition-all">Nuestros Servicios</a>
+            <p class="text-xl text-slate-200 mb-10 max-w-2xl mx-auto font-light" data-i18n="hero-sub">Excelencia operativa y compliance internacional en el sector energético.</p>
+            <a href="#contact" data-i18n="nav-contact" class="bg-[#39D87E] text-[#204788] px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:shadow-[0_0_20px_rgba(57,216,126,0.4)] transition-all inline-block">Contáctanos</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold text-[#204788] mb-6" data-i18n="nav-about">Quiénes Somos</h2>
+                <p class="text-lg text-slate-600 mb-6 leading-relaxed" data-i18n="about-p">Orinoco Alliance es una firma líder especializada en el sector energético, con una profunda experiencia en hidrocarburos e infraestructura industrial en Venezuela.</p>
+                <div class="h-1 w-20 bg-[#39D87E]"></div>
+            </div>
+            <div class="bg-slate-50 p-8 rounded-2xl border-l-8 border-[#39D87E]">
+                <h3 class="text-xl font-bold text-[#204788] mb-4" data-i18n="mission-t">Misión</h3>
+                <p class="text-slate-600" data-i18n="mission-p">Proveer soluciones energéticas con excelencia técnica, ética y responsabilidad social.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-white reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" class="py-24 bg-slate-50 reveal">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="about-title">Quiénes Somos</h2>
-                <div class="w-24 h-1 bg-[#39D87E] mx-auto"></div>
+                <h2 class="text-4xl font-bold text-[#204788] mb-4" data-i18n="nav-services">Nuestros Servicios</h2>
+                <p class="text-slate-500" data-i18n="services-sub">Capacidad técnica al servicio de la industria.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p1">Orinoco Alliance es una firma líder especializada en el sector energético, con una profunda experiencia en <span class="font-bold text-[#204788]">hidrocarburos, electricidad e infraestructura industrial</span> en Venezuela.</p>
-                    <p class="text-lg text-slate-600 leading-relaxed" data-i18n="about-p2">Combinamos el conocimiento local con estándares internacionales para ofrecer soluciones integrales que impulsan el desarrollo sostenible y la eficiencia operativa de nuestros clientes.</p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-10 rounded-xl shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-[#39D87E]">
+                    <i data-lucide="handshake" class="mx-auto mb-6 text-[#39D87E] w-12 h-12"></i>
+                    <h3 class="font-bold text-[#204788] mb-2" data-i18n="srv1">Alianzas Estratégicas</h3>
                 </div>
-                <div class="grid gap-6">
-                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#39D87E] shadow-sm hover:shadow-md transition-shadow">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-slate-200 p-3 rounded-full"><i data-lucide="compass" class="w-8 h-8 text-[#204788]"></i></div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#204788] mb-2" data-i18n="about-mission-title">Misión</h3>
-                                <p class="text-slate-600" data-i18n="about-mission-desc">Proveer soluciones energéticas integrales con excelencia operativa, fomentando el desarrollo local y cumpliendo con los más altos estándares éticos.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-xl border-l-4 border-[#204788] shadow-sm hover:shadow-md transition-shadow">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-[#39D87E]/20 p-3 rounded-full"><i data-lucide="target" class="w-8 h-8 text-[#39D87E]"></i></div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#204788] mb-2" data-i18n="about-vision-title">Visión</h3>
-                                <p class="text-slate-600" data-i18n="about-vision-desc">Ser el referente indiscutible en servicios industriales y energéticos en la región, reconocidos por nuestra integridad y capacidad de ejecución.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="bg-white p-10 rounded-xl shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-[#39D87E]">
+                    <i data-lucide="briefcase" class="mx-auto mb-6 text-[#39D87E] w-12 h-12"></i>
+                    <h3 class="font-bold text-[#204788] mb-2" data-i18n="srv2">Asset Management</h3>
+                </div>
+                <div class="bg-white p-10 rounded-xl shadow-sm hover:shadow-xl transition-all border-b-4 border-transparent hover:border-[#39D87E]">
+                    <i data-lucide="shield-check" class="mx-auto mb-6 text-[#39D87E] w-12 h-12"></i>
+                    <h3 class="font-bold text-[#204788] mb-2" data-i18n="srv3">Compliance Técnico</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-slate-50 reveal">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="services-title">Nuestros Servicios</h2>
-                <div class="w-24 h-1 bg-[#39D87E] mx-auto mb-6"></div>
-                <p class="text-slate-600 max-w-2xl mx-auto" data-i18n="services-subtitle">Soluciones estratégicas diseñadas para optimizar cada etapa de la cadena de valor energética.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-[#39D87E] group">
-                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300"><i data-lucide="file-text" class="w-8 h-8 text-[#39D87E]"></i></div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-1-title">Asesoría en Licitaciones</h3>
-                    <p class="text-slate-600" data-i18n="srv-1-desc">Soporte estratégico en procesos de licitación pública y privada.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-[#39D87E] group">
-                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300"><i data-lucide="briefcase" class="w-8 h-8 text-[#39D87E]"></i></div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-2-title">Asset Management</h3>
-                    <p class="text-slate-600" data-i18n="srv-2-desc">Gestión integral de activos para optimizar el rendimiento y la vida útil.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-[#39D87E] group">
-                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300"><i data-lucide="trending-up" class="w-8 h-8 text-[#39D87E]"></i></div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-3-title">Consultoría Técnica</h3>
-                    <p class="text-slate-600" data-i18n="srv-3-desc">Asesoramiento especializado en aspectos técnicos y financieros.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-[#39D87E] group">
-                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300"><i data-lucide="handshake" class="w-8 h-8 text-[#39D87E]"></i></div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-4-title">Alianzas Estratégicas</h3>
-                    <p class="text-slate-600" data-i18n="srv-4-desc">Alianzas estratégicas para maximizar el potencial de proyectos energéticos.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-[#39D87E] group">
-                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300"><i data-lucide="users" class="w-8 h-8 text-[#39D87E]"></i></div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-5-title">Servicios de Subcontratación</h3>
-                    <p class="text-slate-600" data-i18n="srv-5-desc">Coordinación y supervisión experta de servicios subcontratados.</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-[#39D87E] group">
-                    <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300"><i data-lucide="truck" class="w-8 h-8 text-[#39D87E]"></i></div>
-                    <h3 class="text-xl font-bold text-[#204788] mb-3" data-i18n="srv-6-title">Contratos de Cadena de Suministro</h3>
-                    <p class="text-slate-600" data-i18n="srv-6-desc">Soluciones logísticas y de cadena de suministro eficientes y confiables.</p>
-                </div>
+    <section id="compliance" class="py-24 bg-[#3F3F3F] text-white">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
+            <h2 class="text-3xl font-bold mb-8" data-i18n="nav-compliance">Compliance & Excelencia</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-full bg-[#39D87E] flex items-center justify-center font-bold text-[#204788] mb-2 shadow-lg">ISO</div><span class="text-xs uppercase font-bold">9001:2015</span></div>
+                <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-full bg-[#39D87E] flex items-center justify-center font-bold text-[#204788] mb-2 shadow-lg">OFAC</div><span class="text-xs uppercase font-bold">Licensed</span></div>
+                <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-full bg-[#39D87E] flex items-center justify-center font-bold text-[#204788] mb-2 shadow-lg">ISO</div><span class="text-xs uppercase font-bold">45001:2018</span></div>
+                <div class="flex flex-col items-center"><div class="w-16 h-16 rounded-full bg-[#39D87E] flex items-center justify-center font-bold text-[#204788] mb-2 shadow-lg">ETH</div><span class="text-xs uppercase font-bold">Ethics Code</span></div>
             </div>
         </div>
     </section>
 
-    <section id="compliance" class="py-20 bg-[#3F3F3F] text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#39D87E 1px, transparent 1px); background-size: 30px 30px;"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="inline-block bg-[#39D87E] text-[#204788] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4" data-i18n="comp-badge">The Trust Factor</div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="comp-title">Compliance & Estándares Internacionales</h2>
-                    <p class="text-slate-300 text-lg mb-8 leading-relaxed" data-i18n="comp-desc">En Orinoco Alliance, la integridad no es negociable. Operamos bajo estrictos marcos regulatorios internacionales para garantizar seguridad y transparencia en cada operación.</p>
-                    <div class="bg-[#204788]/50 border border-[#39D87E]/30 rounded-xl p-6 mb-10 backdrop-blur-sm relative overflow-hidden group hover:border-[#39D87E]/60 transition-colors shadow-lg">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="bg-[#39D87E]/10 p-2 rounded-full"><i data-lucide="shield-check" class="text-[#39D87E] w-6 h-6"></i></div>
-                            <h3 class="text-xl font-bold text-white" data-i18n="comp-ofac-title">Licencias OFAC</h3>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n="comp-ofac-desc">Operamos en estricto cumplimiento con la <span class="text-[#ACF683] font-semibold">Office of Foreign Assets Control</span>, garantizando seguridad jurídica y transparencia total.</p>
+    <section id="contact" class="py-24 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-4 bg-slate-50 p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold text-[#204788] mb-8 text-center" data-i18n="nav-contact">Contacto</h2>
+                <form action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Nombre" required class="p-4 rounded-lg bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-[#39D87E]">
+                        <input type="email" name="email" placeholder="Correo" required class="p-4 rounded-lg bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-[#39D87E]">
                     </div>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="flex flex-col items-center text-center group">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#ACF683] via-[#39D87E] to-[#204788] flex items-center justify-center shadow-lg mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-[#ACF683]/20"><i data-lucide="check" class="text-white w-8 h-8"></i></div>
-                            <div class="text-white font-bold text-sm tracking-wide" data-i18n="iso-9001-title">ISO 9001</div>
-                            <div class="text-slate-400 text-xs mt-1 font-medium" data-i18n="iso-9001-desc">Calidad</div>
-                        </div>
-                        <div class="flex flex-col items-center text-center group">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#ACF683] via-[#39D87E] to-[#204788] flex items-center justify-center shadow-lg mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-[#ACF683]/20"><i data-lucide="shield" class="text-white w-8 h-8"></i></div>
-                            <div class="text-white font-bold text-sm tracking-wide" data-i18n="iso-45001-title">ISO 45001</div>
-                            <div class="text-slate-400 text-xs mt-1 font-medium" data-i18n="iso-45001-desc">Seguridad</div>
-                        </div>
-                        <div class="flex flex-col items-center text-center group">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#ACF683] via-[#39D87E] to-[#204788] flex items-center justify-center shadow-lg mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-[#ACF683]/20"><i data-lucide="lock" class="text-white w-8 h-8"></i></div>
-                            <div class="text-white font-bold text-sm tracking-wide" data-i18n="iso-37001-title">ISO 37001</div>
-                            <div class="text-slate-400 text-xs mt-1 font-medium" data-i18n="iso-37001-desc">Antisoborno</div>
-                        </div>
-                        <div class="flex flex-col items-center text-center group">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#ACF683] via-[#39D87E] to-[#204788] flex items-center justify-center shadow-lg mb-3 transform group-hover:scale-110 transition-transform duration-300 border-2 border-[#ACF683]/20"><i data-lucide="settings" class="text-white w-8 h-8"></i></div>
-                            <div class="text-white font-bold text-sm tracking-wide" data-i18n="iso-55001-title">ISO 55001</div>
-                            <div class="text-slate-400 text-xs mt-1 font-medium" data-i18n="iso-55001-desc">Activos</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#204788] p-8 rounded-2xl border border-[#204788]/50 shadow-xl">
-                    <h3 class="text-2xl font-bold mb-6 text-center text-white" data-i18n="pol-title">Políticas Corporativas</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-[#3F3F3F]/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-[#3F3F3F] transition-colors border border-transparent hover:border-[#39D87E]/30">
-                            <div class="text-[#39D87E] mb-3"><i data-lucide="shield" class="w-6 h-6"></i></div>
-                            <span class="font-semibold text-white" data-i18n="pol-1">Anticorrupción</span>
-                        </div>
-                        <div class="bg-[#3F3F3F]/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-[#3F3F3F] transition-colors border border-transparent hover:border-[#39D87E]/30">
-                            <div class="text-[#39D87E] mb-3"><i data-lucide="users" class="w-6 h-6"></i></div>
-                            <span class="font-semibold text-white" data-i18n="pol-2">Antidiscriminación</span>
-                        </div>
-                        <div class="bg-[#3F3F3F]/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-[#3F3F3F] transition-colors border border-transparent hover:border-[#39D87E]/30">
-                            <div class="text-[#39D87E] mb-3"><i data-lucide="lock" class="w-6 h-6"></i></div>
-                            <span class="font-semibold text-white" data-i18n="pol-3">Confidencialidad</span>
-                        </div>
-                        <div class="bg-[#3F3F3F]/50 p-6 rounded-lg flex flex-col items-center text-center hover:bg-[#3F3F3F] transition-colors border border-transparent hover:border-[#39D87E]/30">
-                            <div class="text-[#39D87E] mb-3"><i data-lucide="scale" class="w-6 h-6"></i></div>
-                            <span class="font-semibold text-white" data-i18n="pol-4">Ética</span>
-                        </div>
-                    </div>
-                </div>
+                    <textarea name="message" rows="4" placeholder="Mensaje" class="w-full p-4 rounded-lg bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-[#39D87E]"></textarea>
+                    <button type="submit" class="w-full bg-[#204788] text-white py-4 font-bold rounded-lg uppercase tracking-widest hover:bg-[#1a3a6e] transition-colors">Enviar Solicitud</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="gal-title">Excelencia Operativa</h2>
-                <div class="w-24 h-1 bg-[#39D87E] mx-auto mb-6"></div>
-                <p class="text-slate-600 max-w-2xl mx-auto" data-i18n="gal-subtitle">Infraestructura y tecnología de vanguardia al servicio de la industria.</p>
+    <footer class="bg-[#204788] py-16 text-slate-400 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <p class="text-xs uppercase mb-4 tracking-widest text-[#39D87E]">Orinoco Alliance Energy Services</p>
+                <p class="text-xs max-w-sm mb-4">Créditos: Refinería por Luisovalles (CC); Río Orinoco por Inti (CC).</p>
+                <p class="text-sm">© 2026. RIF: [PENDIENTE]. <span data-i18n="rights">Todos los derechos reservados.</span></p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="group relative overflow-hidden rounded-lg h-64">
-                    <img src="https://googleusercontent.com/profile/picture/3" alt="Orinoco Alliance Engineering Team" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
-                    <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
-                </div>
-                <div class="group relative overflow-hidden rounded-lg h-64">
-                    <img src="https://googleusercontent.com/profile/picture/4" alt="Venezuelan Energy Infrastructure" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
-                    <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
-                </div>
-                <div class="group relative overflow-hidden rounded-lg h-64">
-                    <img src="https://googleusercontent.com/profile/picture/5" alt="Sustainable Solar Energy Solutions" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
-                    <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
-                </div>
-                <div class="group relative overflow-hidden rounded-lg h-64 lg:col-span-2">
-                    <img src="https://googleusercontent.com/profile/picture/6" alt="Wind Turbine Infrastructure" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
-                    <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
-                </div>
-                <div class="group relative overflow-hidden rounded-lg h-64">
-                    <img src="https://googleusercontent.com/profile/picture/7" alt="ISO Standards Compliance Audit" class="w-full h-full object-cover transition-all duration-500 transform group-hover:scale-110" referrerpolicy="no-referrer">
-                    <div class="absolute inset-0 bg-[#204788]/20 group-hover:bg-transparent transition-colors"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#204788] mb-4" data-i18n="contact-title">Contáctanos</h2>
-                <div class="w-24 h-1 bg-[#39D87E] mx-auto mb-6"></div>
-                <p class="text-slate-600 text-lg max-w-2xl mx-auto" data-i18n="contact-subtitle">Estamos listos para ser su aliado estratégico en Venezuela. Solicite una reunión con nuestros expertos.</p>
-            </div>
-            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-16">
-                <div>
-                    <div class="space-y-6">
-                        <a href="https://maps.google.com/?q=Torre+Empresarial+Caracas" target="_blank" class="flex flex-col items-start gap-2 group">
-                            <div class="bg-slate-200 p-3 rounded-full group-hover:bg-[#39D87E] transition-colors"><i data-lucide="map-pin" class="w-6 h-6 text-[#204788] group-hover:text-white transition-transform duration-300"></i></div>
-                            <div>
-                                <h4 class="font-bold text-[#204788] group-hover:text-[#39D87E] transition-colors" data-i18n="contact-hq-title">Oficina Principal</h4>
-                                <p class="text-slate-600" data-i18n="contact-hq-desc">Torre Empresarial, Av. Principal, Caracas, Venezuela</p>
-                            </div>
-                        </a>
-                        <div class="flex items-start gap-4 group">
-                            <div class="bg-slate-200 p-3 rounded-full group-hover:bg-[#39D87E] transition-colors"><i data-lucide="mail" class="w-6 h-6 text-[#204788] group-hover:text-white transition-opacity duration-300"></i></div>
-                            <div class="w-full">
-                                <h4 class="font-bold text-[#204788] group-hover:text-[#39D87E] transition-colors" data-i18n="contact-email-title">Correo Electrónico</h4>
-                                <div class="mt-1">
-                                    <a href="mailto:luis.abreu@ptsorinocoenergy.com" class="md:hidden text-slate-600 break-all">luis.abreu@ptsorinocoenergy.com</a>
-                                    <div class="hidden md:flex items-center gap-2 justify-start relative">
-                                        <span class="text-slate-600 cursor-default break-all">luis.abreu@ptsorinocoenergy.com</span>
-                                        <button onclick="copyToClipboard('luis.abreu@ptsorinocoenergy.com', this)" class="p-1 text-slate-400 hover:text-[#39D87E] transform active:scale-90" title="Copiar"><i data-lucide="copy" class="w-4 h-4"></i></button>
-                                        <span class="copy-feedback text-[#39D87E] text-xs font-bold opacity-0 absolute left-full ml-2 whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
-                                    </div>
-                                </div>
-                                <div class="mt-1">
-                                    <a href="mailto:jesus.arenas@ptsorinocoenergy.com" class="md:hidden text-slate-600 break-all">jesus.arenas@ptsorinocoenergy.com</a>
-                                    <div class="hidden md:flex items-center gap-2 justify-start relative">
-                                        <span class="text-slate-600 cursor-default break-all">jesus.arenas@ptsorinocoenergy.com</span>
-                                        <button onclick="copyToClipboard('jesus.arenas@ptsorinocoenergy.com', this)" class="p-1 text-slate-400 hover:text-[#39D87E] transform active:scale-90" title="Copiar"><i data-lucide="copy" class="w-4 h-4"></i></button>
-                                        <span class="copy-feedback text-[#39D87E] text-xs font-bold opacity-0 absolute left-full ml-2 whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 group">
-                            <div class="bg-slate-200 p-3 rounded-full group-hover:bg-[#39D87E] transition-colors"><i data-lucide="phone" class="w-6 h-6 text-[#204788] group-hover:text-white"></i></div>
-                            <div class="w-full">
-                                <h4 class="font-bold text-[#204788] group-hover:text-[#39D87E] transition-colors" data-i18n="contact-phone-title">Teléfono</h4>
-                                <div class="mt-1">
-                                    <a href="tel:+51993847942" class="text-slate-600 hover:text-[#39D87E] transition-colors">+51 993 847 942</a>
-                                </div>
-                                <div class="mt-1">
-                                    <a href="tel:+584248917747" class="text-slate-600 hover:text-[#39D87E] transition-colors">+58 424 891 7747</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 relative min-h-[450px]">
-                    <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6 h-full flex flex-col justify-between">
-                        <input type="text" name="_gotcha" style="display:none">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-name-label">Nombre Completo</label>
-                            <input type="text" id="name" name="name" data-i18n="form-name-ph" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all" placeholder="Juan Pérez" required />
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-email-label">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" data-i18n="form-email-ph" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all" placeholder="juan@empresa.com" required />
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-slate-700 mb-1" data-i18n="form-msg-label">Mensaje</label>
-                            <textarea id="message" name="message" rows="4" data-i18n="form-msg-ph" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#39D87E] focus:border-transparent outline-none transition-all" placeholder="¿En qué podemos ayudarle?" required></textarea>
-                        </div>
-                        <button type="submit" data-i18n="form-submit" class="w-full bg-[#204788] text-white font-bold py-4 rounded-lg hover:bg-[#204788]/90 transition-colors uppercase tracking-wider shadow-md hover:shadow-lg">Solicita una reunión</button>
-                        <div id="form-status" class="text-center text-sm text-red-500 mt-2"></div>
-                    </form>
-                    <div id="form-success-message" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white rounded-xl p-8 text-center z-10">
-                        <div class="w-16 h-16 bg-[#39D87E]/20 rounded-full flex items-center justify-center mb-4"><i data-lucide="check" class="w-8 h-8 text-[#39D87E]"></i></div>
-                        <h3 class="text-xl font-bold text-[#204788] mb-2" data-i18n="form-success-title">¡Mensaje Enviado!</h3>
-                        <p class="text-slate-600" data-i18n="form-success-desc">Gracias por contactarnos. Le responderemos a la brevedad.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-[#204788] text-slate-300 py-12 border-t border-[#204788]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div class="col-span-1 md:col-span-2">
-                    <a href="#home" class="flex items-center gap-2 mb-4 group active:scale-95 transition-transform duration-150 w-fit">
-                        <svg viewBox="0 0 100 100" class="w-8 h-8 fill-[#39D87E] group-hover:rotate-180 transition-transform duration-1000 ease-in-out" xmlns="http://www.w3.org/2000/svg">
-                            <g transform="translate(50, 50)">
-                                <defs><path id="blade-footer" d="M 8,-14 Q 15,-28 17,-40 L 27,-34 Q 23,-22 17,-10 Z" /></defs>
-                                <use href="#blade-footer" transform="rotate(0)" /><use href="#blade-footer" transform="rotate(17.14)" />
-                                <use href="#blade-footer" transform="rotate(34.29)" /><use href="#blade-footer" transform="rotate(51.43)" />
-                                <use href="#blade-footer" transform="rotate(68.57)" /><use href="#blade-footer" transform="rotate(85.71)" />
-                                <use href="#blade-footer" transform="rotate(102.86)" /><use href="#blade-footer" transform="rotate(120)" />
-                                <use href="#blade-footer" transform="rotate(137.14)" /><use href="#blade-footer" transform="rotate(154.29)" />
-                                <use href="#blade-footer" transform="rotate(171.43)" /><use href="#blade-footer" transform="rotate(188.57)" />
-                                <use href="#blade-footer" transform="rotate(205.71)" /><use href="#blade-footer" transform="rotate(222.86)" />
-                                <use href="#blade-footer" transform="rotate(240)" /><use href="#blade-footer" transform="rotate(257.14)" />
-                                <use href="#blade-footer" transform="rotate(274.29)" /><use href="#blade-footer" transform="rotate(291.43)" />
-                                <use href="#blade-footer" transform="rotate(308.57)" /><use href="#blade-footer" transform="rotate(325.71)" />
-                                <use href="#blade-footer" transform="rotate(342.86)" />
-                            </g>
-                        </svg>
-                        <span class="text-white font-bold text-lg tracking-wide uppercase">Orinoco<span class="text-[#39D87E]">Alliance</span></span>
-                    </a>
-                    <p class="text-sm max-w-xs" data-i18n="footer-desc">Soporte local para la energía global. Comprometidos con la excelencia, la ética y el desarrollo sostenible de Venezuela.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider" data-i18n="footer-links-title">Enlaces</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#about" data-i18n="nav-about" class="hover:text-[#39D87E] transition-colors">Quiénes Somos</a></li>
-                        <li><a href="#services" data-i18n="nav-services" class="hover:text-[#39D87E] transition-colors">Servicios</a></li>
-                        <li><a href="#compliance" data-i18n="nav-compliance" class="hover:text-[#39D87E] transition-colors">Compliance</a></li>
-                        <li><a href="#contact" data-i18n="nav-contact" class="hover:text-[#39D87E] transition-colors">Contacto</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider" data-i18n="footer-legal-title">Legal</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" data-i18n="footer-legal-1" class="hover:text-[#39D87E] transition-colors">Política de Privacidad</a></li>
-                        <li><a href="#" data-i18n="footer-legal-2" class="hover:text-[#39D87E] transition-colors">Términos de Uso</a></li>
-                        <li><a href="#" data-i18n="footer-legal-3" class="hover:text-[#39D87E] transition-colors">Código de Ética</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-[#3F3F3F] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                <div class="flex flex-col gap-2 text-center md:text-left">
-                    <p class="text-slate-400" data-i18n="footer-credits">Créditos fotográficos: Refinería de Amuay por Luisovalles; Río Orinoco por Inti (bajo licencia Creative Commons).</p>
-                    <p>© <span id="year"></span> Orinoco Alliance. RIF: [PENDIENTE]. <span data-i18n="footer-rights">Todos los derechos reservados.</span></p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="w-8 h-8 bg-[#3F3F3F] rounded-full flex items-center justify-center hover:bg-[#39D87E] hover:text-[#204788] transition-colors cursor-pointer"><i data-lucide="linkedin" class="w-4 h-4"></i></div>
-                    <div class="w-8 h-8 bg-[#3F3F3F] rounded-full flex items-center justify-center hover:bg-[#39D87E] hover:text-[#204788] transition-colors cursor-pointer"><i data-lucide="twitter" class="w-4 h-4"></i></div>
-                </div>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#39D87E] hover:text-[#204788] transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#39D87E] hover:text-[#204788] transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/51993847942" id="wa-mobile-link" target="_blank" class="md:hidden fixed bottom-4 left-4 p-3 rounded-full shadow-lg z-50 animate-pulse hover:scale-110 transition-transform group">
-        <svg viewBox="0 0 24 24" class="w-12 h-12 fill-[#25D366] drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-    </a>
+    <button id="scroll-top-btn" class="fixed bottom-6 right-6 p-4 bg-[#39D87E] text-[#204788] rounded-full shadow-2xl scroll-hidden z-50 transition-all active:scale-90"><i data-lucide="arrow-up"></i></button>
 
-    <button id="scroll-top-btn" class="fixed bottom-4 right-4 bg-[#39D87E] text-[#204788] p-3 rounded-full shadow-lg hover:bg-[#39D87E]/90 transition-all z-50 scroll-hidden">
-        <i data-lucide="arrow-up" class="w-6 h-6"></i>
-    </button>
-    
     <script>
         lucide.createIcons();
-        document.getElementById('year').textContent = new Date().getFullYear();
-       
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const mobileIcon = mobileMenuBtn.querySelector('i');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const isHidden = mobileMenu.classList.contains('hidden');
-            mobileIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
-            lucide.createIcons();
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileIcon.setAttribute('data-lucide', 'menu');
-                lucide.createIcons();
-            });
-        });
-
-        const scrollBtn = document.getElementById('scroll-top-btn');
-        const reveals = document.querySelectorAll('.reveal');
-        const handleScrollEffects = () => {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.remove('scroll-hidden');
-                scrollBtn.classList.add('scroll-visible');
-            } else {
-                scrollBtn.classList.add('scroll-hidden');
-                scrollBtn.classList.remove('scroll-visible');
-            }
-            const windowHeight = window.innerHeight;
-            const elementVisible = 150;
-            reveals.forEach((reveal) => {
-                const elementTop = reveal.getBoundingClientRect().top;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveal.classList.add('active');
-                }
-            });
-        };
-        window.addEventListener('scroll', handleScrollEffects);
-        handleScrollEffects();
-
-        const smoothScroll = (target, duration) => {
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            let start = null;
-            window.requestAnimationFrame(step);
-            function step(timestamp) {
-                if (!start) start = timestamp;
-                const progress = timestamp - start;
-                const ease = progress / duration < 0.5
-                    ? 4 * progress * progress * progress / (duration * duration * duration)
-                    : 1 - Math.pow(-2 * progress / duration + 2, 3) / 2;
-                window.scrollTo(0, startPosition + distance * ease);
-                if (progress < duration) window.requestAnimationFrame(step);
-                else window.scrollTo(0, targetPosition);
-            }
-        };
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) smoothScroll(targetElement, 1000);
-            });
-        });
-
-        document.getElementById('scroll-top-btn').addEventListener('click', (e) => {
-            e.preventDefault();
-            smoothScroll(document.body, 1000);
-        });
-
-        function copyToClipboard(text, btn) {
-            navigator.clipboard.writeText(text).then(() => {
-                const icon = btn.querySelector('i');
-                const feedback = btn.nextElementSibling;
-                if (!btn.dataset.originalIcon) btn.dataset.originalIcon = icon.getAttribute('data-lucide');
-                icon.setAttribute('data-lucide', 'check');
-                icon.classList.add('text-[#39D87E]');
-                lucide.createIcons();
-                if (feedback && feedback.classList.contains('copy-feedback')) {
-                    feedback.classList.remove('copy-feedback-active');
-                    void feedback.offsetWidth;
-                    feedback.classList.add('copy-feedback-active');
-                }
-                setTimeout(() => {
-                    icon.setAttribute('data-lucide', btn.dataset.originalIcon || 'copy');
-                    icon.classList.remove('text-[#39D87E]');
-                    lucide.createIcons();
-                }, 2000);
-            });
-        }
-
-        const form = document.getElementById('contact-form');
-        const successMessage = document.getElementById('form-success-message');
-        const status = document.getElementById("form-status");
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault();
-            const data = new FormData(event.target);
-            try {
-                const response = await fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (response.ok) {
-                    form.style.display = 'none';
-                    successMessage.classList.remove('hidden');
-                    form.reset();
-                } else {
-                    status.innerHTML = "Error sending message.";
-                }
-            } catch (error) {
-                status.innerHTML = "Error sending message.";
-            }
-        });
-
-        // Flag SVGs
-        const flagIcons = {
-            es: `<svg viewBox="0 0 512 512" class="w-5 h-5 rounded-full shadow-sm"><circle fill="#F1BF00" cx="256" cy="256" r="256"/><path fill="#C51918" d="M256 0c-97.1 0-181.7 54-225.8 133.6h451.6C437.7 54 353.1 0 256 0zM30.2 378.4C74.3 458 158.9 512 256 512s181.7-54 225.8-133.6H30.2z"/></svg>`,
-            en: `<svg viewBox="0 0 512 512" class="w-5 h-5 rounded-full shadow-sm"><circle fill="#EEE" cx="256" cy="256" r="256"/><path fill="#3E5D94" d="M12.7 191H287V0C134.5 0 12.7 85.5 12.7 191z"/><path fill="#C51918" d="M472.5 133.6H287v42.6h211.3c3.6-14 6.1-28.2 7.5-42.6zM509.7 221.2H287v42.7h224.2c.5-14.1.8-28.3.8-42.7s-.3-28.6-.8-42.7H287v42.7h222.7zM498.3 336.4H287v42.6h185.5c4-14 7.3-28.2 9.8-42.6zM225 378.4H30.2c44.1 79.6 128.7 133.6 225.8 133.6s181.7-54 225.8-133.6H225v42.6h243.3c-14.2 35-37.1 65.5-66.2 88.3l-17.7-17.7-17.7 17.7c-29.1-22.8-52-53.3-66.2-88.3H225v42.6z"/></svg>`
-        };
-
+        
+        // --- TRANSLATION DATA ---
         const translations = {
             es: {
-                "nav-about": "Quiénes Somos", "nav-services": "Servicios", "nav-compliance": "Compliance", "nav-excellence": "Excelencia", "nav-contact": "Contacto",
-                "hero-title-1": "Soporte local para la", "hero-title-2": "energía global", "hero-subtitle": "Con ética, sostenibilidad y compliance internacional.",
-                "hero-btn-contact": "Contáctanos", "hero-btn-services": "Nuestros Servicios", "about-title": "Quiénes Somos",
-                "about-p1": "Orinoco Alliance es una firma líder especializada en el sector energético, con una profunda experiencia en <span class=\"font-bold text-[#204788]\">hidrocarburos, electricidad e infraestructura industrial</span> en Venezuela.",
-                "about-p2": "Combinamos el conocimiento local con estándares internacionales para ofrecer soluciones integrales que impulsan el desarrollo sostenible y la eficiencia operativa de nuestros clientes.",
-                "about-mission-title": "Misión", "about-mission-desc": "Proveer soluciones energéticas integrales con excelencia operativa, fomentando el desarrollo local y cumpliendo con los más altos estándares éticos.",
-                "about-vision-title": "Visión", "about-vision-desc": "Ser el referente indiscutible en servicios industriales y energéticos en la región, reconocidos por nuestra integridad y capacidad de ejecución.",
-                "services-title": "Nuestros Servicios", "services-subtitle": "Soluciones estratégicas diseñadas para optimizar cada etapa de la cadena de valor energética.",
-                "srv-1-title": "Asesoría en Licitaciones", "srv-1-desc": "Soporte estratégico en procesos de licitación pública y privada.",
-                "srv-2-title": "Asset Management", "srv-2-desc": "Gestión integral de activos para optimizar el rendimiento y la vida útil.",
-                "srv-3-title": "Consultoría Técnica", "srv-3-desc": "Asesoramiento especializado en aspectos técnicos y financieros.",
-                "srv-4-title": "Alianzas Estratégicas", "srv-4-desc": "Alianzas estratégicas para maximizar el potencial de proyectos energéticos.",
-                "srv-5-title": "Servicios de Subcontratación", "srv-5-desc": "Coordinación y supervisión experta de servicios subcontratados.",
-                "srv-6-title": "Contratos de Cadena de Suministro", "srv-6-desc": "Soluciones logísticas y de cadena de suministro eficientes y confiables.",
-                "comp-badge": "The Trust Factor", "comp-title": "Compliance & Estándares Internacionales", "comp-desc": "En Orinoco Alliance, la integridad no es negociable. Operamos bajo estrictos marcos regulatorios internacionales para garantizar seguridad y transparencia en cada operación.",
-                "comp-ofac-title": "Licencias OFAC", "comp-ofac-desc": "Operamos en estricto cumplimiento con la <span class=\"text-[#ACF683] font-semibold\">Office of Foreign Assets Control</span>, garantizando seguridad jurídica y transparencia total.",
-                "iso-9001-title": "ISO 9001", "iso-9001-desc": "Calidad", "iso-45001-title": "ISO 45001", "iso-45001-desc": "Seguridad", "iso-37001-title": "ISO 37001", "iso-37001-desc": "Antisoborno", "iso-55001-title": "ISO 55001", "iso-55001-desc": "Activos",
-                "pol-title": "Políticas Corporativas", "pol-1": "Anticorrupción", "pol-2": "Antidiscriminación", "pol-3": "Confidencialidad", "pol-4": "Ética",
-                "gal-title": "Excelencia Operativa", "gal-subtitle": "Infraestructura y tecnología de vanguardia al servicio de la industria.",
-                "contact-title": "Contáctanos", "contact-subtitle": "Estamos listos para ser su aliado estratégico en Venezuela. Solicite una reunión con nuestros expertos.",
-                "contact-hq-title": "Oficina Principal", "contact-hq-desc": "Torre Empresarial, Av. Principal, Caracas, Venezuela",
-                "contact-email-title": "Correo Electrónico", "copy-success": "¡Copiado con éxito!", "contact-phone-title": "Teléfono",
-                "form-name-label": "Nombre Completo", "form-name-ph": "Juan Pérez", "form-email-label": "Correo Electrónico", "form-email-ph": "juan@empresa.com", "form-msg-label": "Mensaje", "form-msg-ph": "¿En qué podemos ayudarle?",
-                "form-submit": "Solicita una reunión", "form-success-title": "¡Mensaje Enviado!", "form-success-desc": "Gracias por contactarnos. Le responderemos a la brevedad.",
-                "footer-desc": "Soporte local para la energía global. Comprometidos con la excelencia, la ética y el desarrollo sostenible de Venezuela.",
-                "footer-links-title": "Enlaces", "footer-legal-title": "Legal", "footer-legal-1": "Política de Privacidad", "footer-legal-2": "Términos de Uso", "footer-legal-3": "Código de Ética",
-                "footer-credits": "Créditos fotográficos: Refinería de Amuay por Luisovalles; Río Orinoco por Inti (bajo licencia Creative Commons).",
-                "footer-rights": "Todos los derechos reservados."
+                "nav-about": "Quiénes Somos", "nav-services": "Servicios", "nav-compliance": "Compliance", "nav-contact": "Contacto",
+                "hero-t1": "Soporte local para la", "hero-t2": "energía global", "hero-sub": "Excelencia operativa y compliance internacional en el sector energético.",
+                "about-p": "Orinoco Alliance es una firma líder especializada en el sector energético, con una profunda experiencia en hidrocarburos e infraestructura industrial en Venezuela.",
+                "mission-t": "Misión", "mission-p": "Proveer soluciones energéticas con excelencia técnica, ética y responsabilidad social.",
+                "srv1": "Alianzas Estratégicas", "srv2": "Asset Management", "srv3": "Compliance Técnico", "rights": "Todos los derechos reservados."
             },
             en: {
-                "nav-about": "About Us", "nav-services": "Services", "nav-compliance": "Compliance", "nav-excellence": "Excellence", "nav-contact": "Contact",
-                "hero-title-1": "Local support for", "hero-title-2": "global energy", "hero-subtitle": "With ethics, sustainability, and international compliance.",
-                "hero-btn-contact": "Contact Us", "hero-btn-services": "Our Services", "about-title": "About Us",
-                "about-p1": "Orinoco Alliance is a leading firm specialized in the energy sector, with deep expertise in <span class=\"font-bold text-[#204788]\">hydrocarbons, electricity, and industrial infrastructure</span> in Venezuela.",
-                "about-p2": "We combine local knowledge with international standards to offer comprehensive solutions that drive sustainable development and operational efficiency for our clients.",
-                "about-mission-title": "Mission", "about-mission-desc": "To provide comprehensive energy solutions with operational excellence, fostering local development and complying with the highest ethical standards.",
-                "about-vision-title": "Vision", "about-vision-desc": "To be the undisputed benchmark in industrial and energy services in the region, recognized for our integrity and execution capacity.",
-                "services-title": "Our Services", "services-subtitle": "Strategic solutions designed to optimize every stage of the energy value chain.",
-                "srv-1-title": "Bidding Advisory", "srv-1-desc": "Strategic support in public and private bidding processes.",
-                "srv-2-title": "Asset Management", "srv-2-desc": "Comprehensive asset management to optimize performance and lifespan.",
-                "srv-3-title": "Technical Consultancy", "srv-3-desc": "Specialized advice on technical and financial aspects.",
-                "srv-4-title": "Strategic Alliances", "srv-4-desc": "Strategic alliances to maximize the potential of energy projects.",
-                "srv-5-title": "Subcontracting Services", "srv-5-desc": "Expert coordination and supervision of subcontracted services.",
-                "srv-6-title": "Supply Chain Contracts", "srv-6-desc": "Efficient and reliable logistics and supply chain solutions.",
-                "comp-badge": "The Trust Factor", "comp-title": "Compliance & International Standards", "comp-desc": "At Orinoco Alliance, integrity is non-negotiable. We operate under strict international regulatory frameworks to ensure security and transparency in every operation.",
-                "comp-ofac-title": "OFAC Licenses", "comp-ofac-desc": "We operate in strict compliance with the <span class=\"text-[#ACF683] font-semibold\">Office of Foreign Assets Control</span>, ensuring legal security and total transparency.",
-                "iso-9001-title": "ISO 9001", "iso-9001-desc": "Quality", "iso-45001-title": "ISO 45001", "iso-45001-desc": "Safety", "iso-37001-title": "ISO 37001", "iso-37001-desc": "Anti-Bribery", "iso-55001-title": "ISO 55001", "iso-55001-desc": "Assets",
-                "pol-title": "Corporate Policies", "pol-1": "Anti-Corruption", "pol-2": "Anti-Discrimination", "pol-3": "Confidentiality", "pol-4": "Ethics",
-                "gal-title": "Operational Excellence", "gal-subtitle": "Cutting-edge infrastructure and technology at the service of the industry.",
-                "contact-title": "Contact Us", "contact-subtitle": "We are ready to be your strategic ally in Venezuela. Request a meeting with our experts.",
-                "contact-hq-title": "Headquarters", "contact-hq-desc": "Torre Empresarial, Av. Principal, Caracas, Venezuela",
-                "contact-email-title": "Email", "copy-success": "Copied successfully!", "contact-phone-title": "Phone",
-                "form-name-label": "Full Name", "form-name-ph": "John Doe", "form-email-label": "Email Address", "form-email-ph": "john@company.com", "form-msg-label": "Message", "form-msg-ph": "How can we help you?",
-                "form-submit": "Request a meeting", "form-success-title": "Message Sent!", "form-success-desc": "Thank you for contacting us. We will reply shortly.",
-                "footer-desc": "Local support for global energy. Committed to excellence, ethics, and the sustainable development of Venezuela.",
-                "footer-links-title": "Links", "footer-legal-title": "Legal", "footer-legal-1": "Privacy Policy", "footer-legal-2": "Terms of Use", "footer-legal-3": "Code of Ethics",
-                "footer-credits": "Photo credits: Amuay Refinery by Luisovalles; Orinoco River by Inti (under CC license).",
-                "footer-rights": "All rights reserved."
+                "nav-about": "About Us", "nav-services": "Services", "nav-compliance": "Compliance", "nav-contact": "Contact Us",
+                "hero-t1": "Local Support for", "hero-t2": "Global Energy", "hero-sub": "Operational excellence and international compliance in the energy sector.",
+                "about-p": "Orinoco Alliance is a leading firm specialized in the energy sector, with deep expertise in hydrocarbons and industrial infrastructure in Venezuela.",
+                "mission-t": "Mission", "mission-p": "To provide energy solutions with technical excellence, ethics, and social responsibility.",
+                "srv1": "Strategic Alliances", "srv2": "Asset Management", "srv3": "Technical Compliance", "rights": "All rights reserved."
             }
         };
 
-        const waMessages = {
-            es: "Hola, estoy interesado en recibir consultoría técnica y apoyo en procesos de licitación.",
-            en: "Hello, I am interested in receiving technical consultancy and support in bidding processes."
+        const flags = {
+            es: `<svg viewBox="0 0 512 512" class="w-5 h-5 rounded-full"><circle fill="#F1BF00" cx="256" cy="256" r="256"/><path fill="#C51918" d="M256 0c-97 0-181 54-225 133h451C437 54 353 0 256 0zM30 378c44 79 128 133 226 133s181-54 225-133H30z"/></svg>`,
+            en: `<svg viewBox="0 0 512 512" class="w-5 h-5 rounded-full"><path fill="#012169" d="M0 0h512v512H0z"/><path fill="#FFF" d="M512 0v64L320 256l192 192v64h-64L256 320 64 512H0v-64l192-192L0 64V0h64l192 192L448 0z"/><path fill="#C8102E" d="M320 320l192 192h-64L256 320zM0 512l192-192L0 320zM192 192L0 0h64l192 192zM512 0L320 192h64L512 0z"/><path fill="#FFF" d="M208 0h96v512h-96zM0 208h512v96H0z"/><path fill="#C8102E" d="M224 0h64v512h-64zM0 224h512v64H0z"/></svg>`
         };
-
-        const desktopLangBtn = document.getElementById('desktop-lang-btn');
-        const desktopLangDropdown = document.getElementById('desktop-lang-dropdown');
-        const desktopCurrentFlag = document.getElementById('desktop-current-flag-container');
 
         function changeLanguage(lang) {
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = translations[lang][key];
-                    else el.innerHTML = translations[lang][key];
-                }
+                if (translations[lang][key]) el.innerHTML = translations[lang][key];
             });
-
-            const waUrl = `https://wa.me/51993847942?text=${encodeURIComponent(waMessages[lang])}`;
-            document.getElementById('wa-desktop-link').href = waUrl;
-            document.getElementById('wa-mobile-link').href = waUrl;
-
-            // Update UI Icons (Desktop)
-            desktopCurrentFlag.innerHTML = flagIcons[lang];
-            document.getElementById('desktop-current-lang').textContent = lang.toUpperCase();
-            document.querySelectorAll('#desktop-lang-dropdown .lang-option').forEach(btn => {
-                btn.classList.toggle('hidden', btn.dataset.lang === lang);
-            });
-
-            // Update UI Icons (Mobile)
-            document.querySelectorAll('.mobile-lang-btn').forEach(btn => {
-                const isActive = btn.dataset.lang === lang;
-                btn.classList.toggle('bg-[#39D87E]', isActive);
-                btn.classList.toggle('text-[#204788]', isActive);
-                btn.classList.toggle('bg-white/10', !isActive);
-                btn.classList.toggle('text-white', !isActive);
-            });
-
-            localStorage.setItem('orinoco_lang', lang);
-            document.documentElement.lang = lang;
-            desktopLangDropdown.classList.add('hidden');
-            desktopLangDropdown.classList.remove('flex');
+            document.getElementById('current-flag').innerHTML = flags[lang];
+            document.getElementById('current-lang-code').textContent = lang.toUpperCase();
+            localStorage.setItem('oa_lang', lang);
+            document.getElementById('lang-dropdown').classList.add('hidden');
         }
 
-        // Initialize Flag Buttons with SVGs
-        document.querySelectorAll('.flag-icon-es').forEach(el => el.innerHTML = flagIcons.es);
-        document.querySelectorAll('.flag-icon-en').forEach(el => el.innerHTML = flagIcons.en);
+        // Logic Initialization
+        const langBtn = document.getElementById('lang-btn');
+        const langDropdown = document.getElementById('lang-dropdown');
+        langBtn.onclick = (e) => { e.stopPropagation(); langDropdown.classList.toggle('hidden'); };
+        window.onclick = () => langDropdown.classList.add('hidden');
+        
+        document.getElementById('mobile-btn').onclick = () => document.getElementById('mobile-menu').classList.toggle('hidden');
 
-        desktopLangBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            desktopLangDropdown.classList.toggle('hidden');
-            desktopLangDropdown.classList.toggle('flex');
-        });
+        window.onscroll = () => {
+            const btn = document.getElementById('scroll-top-btn');
+            btn.classList.toggle('scroll-visible', window.scrollY > 300);
+            btn.classList.toggle('scroll-hidden', window.scrollY <= 300);
+            document.querySelectorAll('.reveal').forEach(r => {
+                if(r.getBoundingClientRect().top < window.innerHeight - 100) r.classList.add('active');
+            });
+        };
 
-        document.addEventListener('click', () => {
-            desktopLangDropdown.classList.add('hidden');
-            desktopLangDropdown.classList.remove('flex');
-        });
+        document.getElementById('scroll-top-btn').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        document.querySelectorAll('.lang-option, .mobile-lang-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => changeLanguage(e.currentTarget.dataset.lang));
-        });
-
-        const savedLang = localStorage.getItem('orinoco_lang') || 'es';
+        // Start
+        const savedLang = localStorage.getItem('oa_lang') || 'es';
         changeLanguage(savedLang);
     </script>
 </body>
