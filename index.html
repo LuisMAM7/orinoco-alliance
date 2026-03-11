@@ -631,37 +631,15 @@
     <button id="scroll-top-btn" class="fixed bottom-4 right-4 bg-[#39D87E] text-[#204788] p-3 rounded-full shadow-lg hover:bg-[#39D87E]/90 transition-all z-50 scroll-hidden">
         <i data-lucide="arrow-up" class="w-6 h-6"></i>
     </button>
-
+    
     <script>
-        // Initialize Lucide Icons
+        // 1. Initialize Lucide Icons
         lucide.createIcons();
        
-        // Update Year
+        // 2. Update Year
         document.getElementById('year').textContent = new Date().getFullYear();
        
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const links = document.querySelectorAll('.mobile-link');
-        const icon = btn.querySelector('i');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            const isHidden = menu.classList.contains('hidden');
-            icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
-            lucide
-error
-The model's generation exceeded the maximum output token limit.
-code
-Html
-<script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-       
-        // Update Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-       
-        // Mobile Menu Toggle
+        // 3. Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const links = document.querySelectorAll('.mobile-link');
@@ -682,9 +660,12 @@ Html
             });
         });
 
-        // Scroll to Top Visibility
+        // 4. Scroll Visibility Logic
         const scrollBtn = document.getElementById('scroll-top-btn');
-        window.addEventListener('scroll', () => {
+        const reveals = document.querySelectorAll('.reveal');
+
+        const handleScrollEffects = () => {
+            // Scroll to Top Button
             if (window.scrollY > 300) {
                 scrollBtn.classList.remove('scroll-hidden');
                 scrollBtn.classList.add('scroll-visible');
@@ -692,11 +673,8 @@ Html
                 scrollBtn.classList.add('scroll-hidden');
                 scrollBtn.classList.remove('scroll-visible');
             }
-        });
 
-        // Scroll Reveal Logic
-        const reveals = document.querySelectorAll('.reveal');
-        const revealOnScroll = () => {
+            // Reveal Animation
             const windowHeight = window.innerHeight;
             const elementVisible = 150;
             reveals.forEach((reveal) => {
@@ -706,10 +684,11 @@ Html
                 }
             });
         };
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Trigger once on load
 
-        // Luxurious Smooth Scroll (Universal)
+        window.addEventListener('scroll', handleScrollEffects);
+        handleScrollEffects(); // Run once on load
+
+        // 5. Luxurious Smooth Scroll
         const smoothScroll = (target, duration) => {
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
             const startPosition = window.pageYOffset;
@@ -721,126 +700,83 @@ Html
             function step(timestamp) {
                 if (!start) start = timestamp;
                 const progress = timestamp - start;
-                // EaseInOutCubic
                 const ease = progress / duration < 0.5
                     ? 4 * progress * progress * progress / (duration * duration * duration)
                     : 1 - Math.pow(-2 * progress / duration + 2, 3) / 2;
                
                 window.scrollTo(0, startPosition + distance * ease);
-                if (progress < duration) {
-                    window.requestAnimationFrame(step);
-                } else {
-                    window.scrollTo(0, targetPosition);
-                }
+                if (progress < duration) window.requestAnimationFrame(step);
+                else window.scrollTo(0, targetPosition);
             }
         };
 
-        // Apply to all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
-               
-                if (targetElement) {
-                    smoothScroll(targetElement, 1000); // 1s duration
-                }
+                if (targetElement) smoothScroll(targetElement, 1000);
             });
         });
 
-        // Apply to Back to Top Button
         document.getElementById('scroll-top-btn').addEventListener('click', (e) => {
             e.preventDefault();
             smoothScroll(document.body, 1000);
         });
 
-        // Copy to Clipboard Function with Enhanced Feedback
+        // 6. Copy to Clipboard
         function copyToClipboard(text, btn) {
             navigator.clipboard.writeText(text).then(() => {
                 const icon = btn.querySelector('i');
                 const feedback = btn.nextElementSibling;
+                if (!btn.dataset.originalIcon) btn.dataset.originalIcon = icon.getAttribute('data-lucide');
                
-                // Store original icon name if not already stored
-                if (!btn.dataset.originalIcon) {
-                    btn.dataset.originalIcon = icon.getAttribute('data-lucide');
-                }
-               
-                // Change to check
                 icon.setAttribute('data-lucide', 'check');
                 icon.classList.add('text-[#39D87E]');
                 lucide.createIcons();
                
-                // Show feedback message
                 if (feedback && feedback.classList.contains('copy-feedback')) {
-                    feedback.classList.remove('copy-feedback-active'); // Reset animation
-                    void feedback.offsetWidth; // Trigger reflow
+                    feedback.classList.remove('copy-feedback-active');
+                    void feedback.offsetWidth;
                     feedback.classList.add('copy-feedback-active');
                 }
                
-                // Revert after 2 seconds
                 setTimeout(() => {
                     icon.setAttribute('data-lucide', btn.dataset.originalIcon || 'copy');
                     icon.classList.remove('text-[#39D87E]');
                     lucide.createIcons();
                 }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
             });
         }
 
-        // Formspree AJAX Handling
+        // 7. Formspree Handling
         const form = document.getElementById('contact-form');
         const successMessage = document.getElementById('form-success-message');
         const status = document.getElementById("form-status");
 
-        async function handleSubmit(event) {
+        form.addEventListener("submit", async (event) => {
             event.preventDefault();
             const data = new FormData(event.target);
-           
             try {
                 const response = await fetch(event.target.action, {
                     method: form.method,
                     body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 });
-               
                 if (response.ok) {
                     form.style.display = 'none';
                     successMessage.classList.remove('hidden');
                     form.reset();
-                    status.innerHTML = "";
                 } else {
-                    const data = await response.json();
-                    if (Object.hasOwn(data, 'errors')) {
-                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-                    } else {
-                        status.innerHTML = "Oops! Hubo un problema al enviar su formulario";
-                    }
+                    status.innerHTML = "Error sending message.";
                 }
             } catch (error) {
-                status.innerHTML = "Oops! Hubo un problema al enviar su formulario";
+                status.innerHTML = "Error sending message.";
             }
-        }
-       
-        form.addEventListener("submit", handleSubmit);
-
-        // Engagement Logic: Reset form on navigation
-        const resetForm = () => {
-            if (!successMessage.classList.contains('hidden')) {
-                successMessage.classList.add('hidden');
-                form.style.display = 'flex'; // Restore to flex (as per class)
-            }
-        };
-
-        // Listen for clicks on nav links and back-to-top
-        document.querySelectorAll('a, #scroll-top-btn').forEach(el => {
-            el.addEventListener('click', resetForm);
         });
 
-        // --- TRANSLATION ENGINE ---
+        // 8. TRANSLATION ENGINE
         const translations = {
             es: {
                 "nav-about": "Quiénes Somos",
@@ -879,19 +815,12 @@ Html
                 "comp-desc": "En Orinoco Alliance, la integridad no es negociable. Operamos bajo estrictos marcos regulatorios internacionales para garantizar seguridad y transparencia en cada operación.",
                 "comp-ofac-title": "Licencias OFAC",
                 "comp-ofac-desc": "Operamos en estricto cumplimiento con la <span class=\"text-[#ACF683] font-semibold\">Office of Foreign Assets Control</span>, garantizando seguridad jurídica y transparencia total.",
-                "iso-9001-title": "ISO 9001",
-                "iso-9001-desc": "Calidad",
-                "iso-45001-title": "ISO 45001",
-                "iso-45001-desc": "Seguridad",
-                "iso-37001-title": "ISO 37001",
-                "iso-37001-desc": "Antisoborno",
-                "iso-55001-title": "ISO 55001",
-                "iso-55001-desc": "Activos",
+                "iso-9001-title": "ISO 9001", "iso-9001-desc": "Calidad",
+                "iso-45001-title": "ISO 45001", "iso-45001-desc": "Seguridad",
+                "iso-37001-title": "ISO 37001", "iso-37001-desc": "Antisoborno",
+                "iso-55001-title": "ISO 55001", "iso-55001-desc": "Activos",
                 "pol-title": "Políticas Corporativas",
-                "pol-1": "Anticorrupción",
-                "pol-2": "Antidiscriminación",
-                "pol-3": "Confidencialidad",
-                "pol-4": "Ética",
+                "pol-1": "Anticorrupción", "pol-2": "Antidiscriminación", "pol-3": "Confidencialidad", "pol-4": "Ética",
                 "gal-title": "Excelencia Operativa",
                 "gal-subtitle": "Infraestructura y tecnología de vanguardia al servicio de la industria.",
                 "contact-title": "Contáctanos",
@@ -911,11 +840,8 @@ Html
                 "form-success-title": "¡Mensaje Enviado!",
                 "form-success-desc": "Gracias por contactarnos. Le responderemos a la brevedad.",
                 "footer-desc": "Soporte local para la energía global. Comprometidos con la excelencia, la ética y el desarrollo sostenible de Venezuela.",
-                "footer-links-title": "Enlaces",
-                "footer-legal-title": "Legal",
-                "footer-legal-1": "Política de Privacidad",
-                "footer-legal-2": "Términos de Uso",
-                "footer-legal-3": "Código de Ética",
+                "footer-links-title": "Enlaces", "footer-legal-title": "Legal",
+                "footer-legal-1": "Política de Privacidad", "footer-legal-2": "Términos de Uso", "footer-legal-3": "Código de Ética",
                 "footer-credits": "Créditos fotográficos: Refinería de Amuay por Luisovalles; Río Orinoco por Inti (bajo licencia Creative Commons).",
                 "footer-rights": "Todos los derechos reservados."
             },
@@ -956,19 +882,12 @@ Html
                 "comp-desc": "At Orinoco Alliance, integrity is non-negotiable. We operate under strict international regulatory frameworks to ensure security and transparency in every operation.",
                 "comp-ofac-title": "OFAC Licenses",
                 "comp-ofac-desc": "We operate in strict compliance with the <span class=\"text-[#ACF683] font-semibold\">Office of Foreign Assets Control</span>, ensuring legal security and total transparency.",
-                "iso-9001-title": "ISO 9001",
-                "iso-9001-desc": "Quality",
-                "iso-45001-title": "ISO 45001",
-                "iso-45001-desc": "Safety",
-                "iso-37001-title": "ISO 37001",
-                "iso-37001-desc": "Anti-Bribery",
-                "iso-55001-title": "ISO 55001",
-                "iso-55001-desc": "Assets",
+                "iso-9001-title": "ISO 9001", "iso-9001-desc": "Quality",
+                "iso-45001-title": "ISO 45001", "iso-45001-desc": "Safety",
+                "iso-37001-title": "ISO 37001", "iso-37001-desc": "Anti-Bribery",
+                "iso-55001-title": "ISO 55001", "iso-55001-desc": "Assets",
                 "pol-title": "Corporate Policies",
-                "pol-1": "Anti-Corruption",
-                "pol-2": "Anti-Discrimination",
-                "pol-3": "Confidentiality",
-                "pol-4": "Ethics",
+                "pol-1": "Anti-Corruption", "pol-2": "Anti-Discrimination", "pol-3": "Confidentiality", "pol-4": "Ethics",
                 "gal-title": "Operational Excellence",
                 "gal-subtitle": "Cutting-edge infrastructure and technology at the service of the industry.",
                 "contact-title": "Contact Us",
@@ -988,12 +907,9 @@ Html
                 "form-success-title": "Message Sent!",
                 "form-success-desc": "Thank you for contacting us. We will reply shortly.",
                 "footer-desc": "Local support for global energy. Committed to excellence, ethics, and the sustainable development of Venezuela.",
-                "footer-links-title": "Links",
-                "footer-legal-title": "Legal",
-                "footer-legal-1": "Privacy Policy",
-                "footer-legal-2": "Terms of Use",
-                "footer-legal-3": "Code of Ethics",
-                "footer-credits": "Photo credits: Amuay Refinery by Luisovalles; Orinoco River by Inti (under Creative Commons license).",
+                "footer-links-title": "Links", "footer-legal-title": "Legal",
+                "footer-legal-1": "Privacy Policy", "footer-legal-2": "Terms of Use", "footer-legal-3": "Code of Ethics",
+                "footer-credits": "Photo credits: Amuay Refinery by Luisovalles; Orinoco River by Inti (under CC license).",
                 "footer-rights": "All rights reserved."
             }
         };
@@ -1003,88 +919,55 @@ Html
             en: "Hello, I am interested in receiving technical consultancy and support in bidding processes."
         };
 
-        const waPhone = "51993847942";
-
         function changeLanguage(lang) {
-            // Update all text elements
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                        el.placeholder = translations[lang][key];
-                    } else {
-                        el.innerHTML = translations[lang][key];
-                    }
+                if (translations[lang] && translations[lang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = translations[lang][key];
+                    else el.innerHTML = translations[lang][key];
                 }
             });
 
-            // Update WhatsApp links
-            const waUrl = `https://wa.me/${waPhone}?text=${encodeURIComponent(waMessages[lang])}`;
+            const waUrl = `https://wa.me/51993847942?text=${encodeURIComponent(waMessages[lang])}`;
             document.getElementById('wa-desktop-link').href = waUrl;
             document.getElementById('wa-mobile-link').href = waUrl;
 
-            // Update Desktop Switcher UI
-            const desktopFlag = lang === 'es' ? '🇪🇸' : '🇺🇸';
-            const desktopLangText = lang === 'es' ? 'ES' : 'EN';
-            document.getElementById('desktop-current-flag').textContent = desktopFlag;
-            document.getElementById('desktop-current-lang').textContent = desktopLangText;
+            document.getElementById('desktop-current-flag').textContent = lang === 'es' ? '🇪🇸' : '🇺🇸';
+            document.getElementById('desktop-current-lang').textContent = lang.toUpperCase();
             
             document.querySelectorAll('#desktop-lang-dropdown .lang-option').forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('hidden');
-                } else {
-                    btn.classList.remove('hidden');
-                }
+                btn.classList.toggle('hidden', btn.dataset.lang === lang);
             });
 
-            // Update Mobile Switcher UI
             document.querySelectorAll('.mobile-lang-btn').forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('bg-[#39D87E]', 'text-[#204788]', 'shadow-md');
-                    btn.classList.remove('bg-white/10', 'text-white', 'border', 'border-transparent');
-                } else {
-                    btn.classList.remove('bg-[#39D87E]', 'text-[#204788]', 'shadow-md');
-                    btn.classList.add('bg-white/10', 'text-white', 'border', 'border-transparent');
-                }
+                const isActive = btn.dataset.lang === lang;
+                btn.classList.toggle('bg-[#39D87E]', isActive);
+                btn.classList.toggle('text-[#204788]', isActive);
             });
 
-            // Save preference
             localStorage.setItem('orinoco_lang', lang);
             document.documentElement.lang = lang;
         }
 
-        // Desktop Dropdown Toggle
         const desktopLangBtn = document.getElementById('desktop-lang-btn');
         const desktopLangDropdown = document.getElementById('desktop-lang-dropdown');
-        const desktopLangChevron = document.getElementById('desktop-lang-chevron');
-
         desktopLangBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             desktopLangDropdown.classList.toggle('hidden');
             desktopLangDropdown.classList.toggle('flex');
-            desktopLangChevron.classList.toggle('rotate-180');
         });
 
         document.addEventListener('click', () => {
-            if (!desktopLangDropdown.classList.contains('hidden')) {
-                desktopLangDropdown.classList.add('hidden');
-                desktopLangDropdown.classList.remove('flex');
-                desktopLangChevron.classList.remove('rotate-180');
-            }
+            desktopLangDropdown.classList.add('hidden');
+            desktopLangDropdown.classList.remove('flex');
         });
 
-        // Language Selection Listeners
         document.querySelectorAll('.lang-option, .mobile-lang-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const lang = e.currentTarget.dataset.lang;
-                changeLanguage(lang);
-            });
+            btn.addEventListener('click', (e) => changeLanguage(e.currentTarget.dataset.lang));
         });
 
-        // Initialize Language
         const savedLang = localStorage.getItem('orinoco_lang') || 'es';
         changeLanguage(savedLang);
-
     </script>
 </body>
 </html>
