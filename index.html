@@ -617,6 +617,17 @@
                 if (targetId === '#') return;
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) smoothScroll(targetElement, 1000);
+        
+                // Reset contact form if it was hidden after a successful submission
+                const form = document.getElementById('contact-form');
+                const successMessage = document.getElementById('form-success-message');
+                const status = document.getElementById("form-status");
+        
+                if (form && form.style.display === 'none') {
+                    form.style.display = 'flex';
+                    if (successMessage) successMessage.classList.add('hidden');
+                    if (status) status.innerHTML = '';
+                }
             });
         });
 
