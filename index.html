@@ -550,6 +550,14 @@
     
     <script>
         lucide.createIcons();
+        
+        // Tell the browser not to remember the scroll position
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        // Force the page to scroll to the very top on load
+        window.scrollTo(0, 0);
+        
         document.getElementById('year').textContent = new Date().getFullYear();
        
         const btn = document.getElementById('mobile-menu-btn');
