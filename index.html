@@ -50,6 +50,20 @@
         .copy-feedback-active {
             animation: fadeInOut 2s forwards;
         }
+
+        /* Infinite Marquee Animation */
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: 200%; 
+            animation: scrollMarquee 30s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused; 
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -441,6 +455,49 @@
         </div>
     </section>
 
+    <!-- Trusted Partners (Infinite Marquee) -->
+    <section class="py-12 bg-white border-y border-slate-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+            <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest" data-i18n="trusted-by">Trusted by Industry Leaders</h3>
+        </div>
+        
+        <!-- Marquee Container -->
+        <div class="relative w-full overflow-hidden">
+            <!-- Gradient Masks for smooth fade-in/out on the edges -->
+            <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            
+            <!-- The Track (Contains 2 identical sets of logos for seamless looping) -->
+            <div class="marquee-track flex items-center">
+                
+                <!-- SET 1 (Original 8 Logos) -->
+                <div class="flex items-center justify-around w-1/2 px-4 gap-8 md:gap-16">
+                    <img src="https://lh3.googleusercontent.com/d/1AM8Lk3H_ip7-ojtXOgJWvu1Mj7vJ73Jb" alt="Petrotecnika" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1UomS0ITg3K6eitcSlv-L6ddlRc9oOknU" alt="Jafralet Services" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1S9PvkVPmBAzJTl6ogJZA12iOY2pISv0y" alt="Petroamérica" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1CWpIU4h3c4sRHnITHi8MfVWQ1z4V6exy" alt="Arenas EPC" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1tKfJCCiUwRzcunkVsTXeMYgwiMTVeCgv" alt="Yupp" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1uW6ojlAd5_3VBZoIo9l3ud2MRUfAOisN" alt="Green Hawk" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/15J4CnxCzAuQwtRg_CWhaHCeG7HdCtMsL" alt="Jere" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1v07gyYzebzJALKyHAoJasB5HvsEmo06a" alt="Zayco Associates INC" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+
+                <!-- SET 2 (Exact Duplicate of Set 1 for the infinite loop) -->
+                <div class="flex items-center justify-around w-1/2 px-4 gap-8 md:gap-16">
+                    <img src="https://lh3.googleusercontent.com/d/1AM8Lk3H_ip7-ojtXOgJWvu1Mj7vJ73Jb" alt="Petrotecnika" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1UomS0ITg3K6eitcSlv-L6ddlRc9oOknU" alt="Jafralet Services" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1S9PvkVPmBAzJTl6ogJZA12iOY2pISv0y" alt="Petroamérica" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1CWpIU4h3c4sRHnITHi8MfVWQ1z4V6exy" alt="Arenas EPC" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1tKfJCCiUwRzcunkVsTXeMYgwiMTVeCgv" alt="Yupp" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1uW6ojlAd5_3VBZoIo9l3ud2MRUfAOisN" alt="Green Hawk" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/15J4CnxCzAuQwtRg_CWhaHCeG7HdCtMsL" alt="Jere" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://lh3.googleusercontent.com/d/1v07gyYzebzJALKyHAoJasB5HvsEmo06a" alt="Zayco Associates INC" class="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Form -->
     <section id="contact" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -757,7 +814,7 @@
                 "srv-4-title": "Alianzas Estratégicas", "srv-4-desc": "Facilitamos alianzas estratégicas y redes de colaboración que potencian el desarrollo de proyectos energéticos y fortalecen el desempeño de sus operaciones en la región.", "srv-5-title": "Servicios de Subcontratación", "srv-5-desc": "Coordinamos y supervisamos servicios subcontratados con enfoque técnico y financiero, realizando auditorías, evaluaciones contractuales y análisis legales para asegurar cumplimiento, eficiencia y transparencia.", "srv-6-title": "Contratos de Cadena de Suministro", "srv-6-desc": "Diseñamos soluciones logísticas y de cadena de suministro que fortalecen la confiabilidad operativa, optimizan costos y garantizan continuidad en sus actividades dentro del mercado energético venezolano.",
                 "comp-badge": "The Trust Factor", "comp-title": "Cumplimiento & Estándares Internacionales", "comp-desc": "En Orinoco Alliance, la integridad no es negociable. Operamos bajo estrictos marcos regulatorios internacionales para garantizar seguridad y transparencia en cada operación.", "comp-ofac-title": "Licencias OFAC", "comp-ofac-desc": "Operamos en estricto cumplimiento con la <span class=\"text-[#ACF683] font-semibold\">Office of Foreign Assets Control</span>, garantizando seguridad jurídica y transparencia total.", "iso-9001-title": "ISO 9001", "iso-9001-desc": "Calidad", "iso-45001-title": "ISO 45001", "iso-45001-desc": "Seguridad", "iso-37001-title": "ISO 37001", "iso-37001-desc": "Antisoborno", "iso-55001-title": "ISO 55001", "iso-55001-desc": "Activos", "pol-title": "Políticas Corporativas", "pol-1": "Anticorrupción", "pol-1-desc": "Nuestra empresa mantiene una política de tolerancia cero frente a cualquier forma de corrupción, soborno o práctica indebida. Actuamos con integridad en todas nuestras operaciones y exigimos el mismo compromiso a nuestros socios, proveedores y contratistas. Todas las decisiones comerciales se toman de manera ética, transparente y en estricto cumplimiento de las leyes aplicables.", 
                 "pol-2": "Antidiscriminación", "pol-2-desc": "Promovemos un entorno de trabajo inclusivo, respetuoso y libre de discriminación. No toleramos prácticas basadas en raza, género, edad, religión, orientación sexual, identidad de género, discapacidad o cualquier otra condición protegida. Valoramos la diversidad como un activo estratégico que fortalece nuestra cultura y desempeño.", "pol-3": "Confidentialidad", "pol-3-desc": "Protegemos rigurosamente la información sensible y estratégica de nuestros clientes, aliados y colaboradores. Toda la información recibida es manejada con estricta reserva y utilizada únicamente para los fines autorizados. Implementamos prácticas modernas de seguridad y cumplimiento para garantizar la integridad y confidencialidad de los datos.", "pol-4": "Ética", "pol-4-desc": "Guiamos nuestras acciones bajo principios de honestidad, responsabilidad y respeto. Cumplimos con las leyes, regulaciones y estándares internacionales aplicables al sector energético, y actuamos siempre en favor del interés legítimo de nuestros clientes y socios. La conducta ética es un pilar fundamental de nuestra identidad corporativa y de cada decisión que tomamos.",
-                "gal-title": "Excelencia Operativa", "gal-subtitle": "Infraestructura y tecnología de vanguardia al servicio de la industria.",
+                "gal-title": "Excelencia Operativa", "gal-subtitle": "Infraestructura y tecnología de vanguardia al servicio de la industria.", "trusted-by": "Con la confianza de Líderes en la Industria",
                 "contact-title": "Contáctanos", "contact-subtitle": "Estamos listos para ser su aliado estratégico en Venezuela. Solicite una reunión con nuestros expertos.", "contact-hq-title": "Oficina Principal", "contact-hq-desc": "Nueva Esparta, Venezuela", "contact-email-title": "Correo Electrónico", "copy-success": "¡Copiado con éxito!", "contact-phone-title": "Teléfono", "form-name-label": "Nombre Completo", "form-name-ph": "Juan Pérez", "form-email-label": "Correo Electrónico", "form-email-ph": "juan@empresa.com", "form-msg-label": "Mensaje", "form-msg-ph": "¿En qué podemos ayudarle?", "form-submit": "Solicita una reunión", "form-success-title": "¡Mensaje Enviado!", "form-success-desc": "Gracias por contactarnos. Le responderemos a la brevedad.",
                 "footer-desc": "Soporte local para la energía global. Comprometidos con la excelencia, la ética y el desarrollo sostenible de Venezuela.", "footer-links-title": "Enlaces", "footer-legal-title": "Legal", "footer-legal-1": "Política de Privacidad", "footer-legal-2": "Términos de Uso", "footer-legal-3": "Código de Ética", "footer-credits": "", "footer-rights": "Todos los derechos reservados.",
                 "link-privacy": "https://drive.google.com/file/d/15jgdfYIf9ad4parqUpp7RjStPxIS2uS2/view", 
@@ -772,7 +829,7 @@
                 "srv-4-title": "Strategic Alliances", "srv-4-desc": "We facilitate strategic partnerships and networking initiatives that enhance the development of energy projects and strengthen the performance of your operations in the region.", "srv-5-title": "Subcontracting Services", "srv-5-desc": "We coordinate and supervise subcontracted services with technical and financial rigor, conducting audits, contractual assessments, and legal analyses to ensure compliance, efficiency, and transparency.", "srv-6-title": "Supply Chain Contracts", "srv-6-desc": "We design efficient supply chain and logistics solutions that enhance operational reliability, optimize costs, and ensure continuity across your activities in the Venezuelan energy market.",
                 "comp-badge": "The Trust Factor", "comp-title": "Compliance & International Standards", "comp-desc": "At Orinoco Alliance, integrity is non-negotiable. We operate under strict international regulatory frameworks to ensure security and transparency in every operation.", "comp-ofac-title": "OFAC Licenses", "comp-ofac-desc": "We operate in strict compliance with the <span class=\"text-[#ACF683] font-semibold\">Office of Foreign Assets Control</span>, ensuring legal security and total transparency.", "iso-9001-title": "ISO 9001", "iso-9001-desc": "Quality", "iso-45001-title": "ISO 45001", "iso-45001-desc": "Safety", "iso-37001-title": "ISO 37001", "iso-37001-desc": "Anti-Bribery", "iso-55001-title": "ISO 55001", "iso-55001-desc": "Assets", "pol-title": "Corporate Policies", "pol-1": "Anti-Corruption", "pol-1-desc": "We maintain a zero‑tolerance approach to any form of corruption, bribery, or improper conduct. Our business decisions are made ethically, transparently, and in full compliance with applicable laws and international standards. We expect the same level of integrity from all partners, suppliers, and contractors.", 
                 "pol-2": "Anti-Discrimination", "pol-2-desc": "We promote an inclusive, respectful, and discrimination‑free work environment. We do not tolerate any practice based on race, gender, age, religion, sexual orientation, gender identity, disability, or any other protected characteristic. Diversity is a core value that strengthens our culture and enhances organizational performance.", "pol-3": "Confidentiality", "pol-3-desc": "We rigorously protect the sensitive and strategic information entrusted to us by clients, partners, and collaborators. All information is handled with strict confidentiality and used solely for authorized purposes. We apply modern security practices and compliance standards to ensure data integrity and protection.", "pol-4": "Ethics", "pol-4-desc": "Our actions are guided by principles of honesty, responsibility, and respect. We comply with all applicable laws, regulations, and international standards governing the energy sector, and we act in the legitimate interest of our clients and partners. Ethical conduct is a fundamental pillar of our corporate identity and decision‑making.",
-                "gal-title": "Operational Excellence", "gal-subtitle": "Cutting-edge infrastructure and technology at the service of the industry.",
+                "gal-title": "Operational Excellence", "gal-subtitle": "Cutting-edge infrastructure and technology at the service of the industry.", "trusted-by": "Trusted by Industry Leaders",
                 "contact-title": "Contact Us", "contact-subtitle": "We are ready to be your strategic ally in Venezuela. Request a meeting with our experts.", "contact-hq-title": "Headquarters", "contact-hq-desc": "Nueva Esparta, Venezuela", "contact-email-title": "Email", "copy-success": "Copied successfully!", "contact-phone-title": "Phone", "form-name-label": "Full Name", "form-name-ph": "John Doe", "form-email-label": "Email Address", "form-email-ph": "john@company.com", "form-msg-label": "Message", "form-msg-ph": "How can we help you?", "form-submit": "Request a meeting", "form-success-title": "Message Sent!", "form-success-desc": "Thank you for contacting us. We will reply shortly.",
                 "footer-desc": "Local support for global energy. Committed to excellence, ethics, and the sustainable development of Venezuela.", "footer-links-title": "Links", "footer-legal-title": "Legal", "footer-legal-1": "Privacy Policy", "footer-legal-2": "Terms of Use", "footer-legal-3": "Code of Ethics", "footer-credits": "", "footer-rights": "All rights reserved.",
                 "link-privacy": "https://drive.google.com/file/d/1qs8H978RzIkdyjNV0oDVCMg65aWqBpaj/view", 
