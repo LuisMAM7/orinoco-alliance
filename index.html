@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orinoco Alliance | Energy Infrastructure & Hydrocarbons in Venezuela</title>
+
+    <!-- Security & Privacy Hardening -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     
     <!-- Canonical & Language Routing -->
     <link rel="canonical" href="https://orinocoalliance.com/" />
@@ -23,23 +28,34 @@
     <meta property="og:image" content="https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9">
     <meta property="og:site_name" content="Orinoco Alliance">
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Enhanced Strategic Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": "ProfessionalService",
           "@id": "https://orinocoalliance.com/#organization",
-          "name": "Orinoco Alliance Energy Services C.A.",
+          "name": "Orinoco Alliance",
+          "legalName": "Orinoco Alliance Energy Services C.A.",
           "url": "https://orinocoalliance.com/",
           "logo": "https://lh3.googleusercontent.com/d/1EFYbe_zmEx_LWGgI6LxJZbzPic4UIpuM",
-          "description": "Leading energy infrastructure, hydrocarbons, and power generation firm in Venezuela. OFAC compliance & asset management. / Firma líder en hidrocarburos, energía e infraestructura industrial en Venezuela con cumplimiento internacional.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Orinoco Alliance"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Jesus Arenas"
+          },
+          "email": "luis.abreu@ptsorinocoenergy.com",
+          "description": "Leading Energy Infrastructure, Hydrocarbons, and Power Generation firm in Venezuela. Specialists in OFAC compliance, Asset Management (ISO 55000), and international industrial standards.",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Caracas",
+            "addressLocality": "Nueva Esparta",
             "addressCountry": "VE"
           },
+          "keywords": "OFAC compliance, Hydrocarbons Venezuela, Energy Infrastructure, Asset Management, ISO 55000, Power Generation, Compliance Standards",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+58-412-690-5281",
@@ -49,12 +65,14 @@
         },
         {
           "@type": "Service",
-          "provider": {
-            "@id": "https://orinocoalliance.com/#organization"
+          "provider": { "@id": "https://orinocoalliance.com/#organization" },
+          "name": "Energy Infrastructure & Compliance Advisory",
+          "serviceType": "Consulting",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Venezuela"
           },
-          "name": "Energy Infrastructure & Hydrocarbons Services",
-          "description": "Expert advisory in bidding, asset management, power generation, and supply chain within the Venezuelan energy sector under OFAC compliance.",
-          "areaServed": "VE"
+          "description": "Comprehensive asset management and hydrocarbons logistics under strict OFAC compliance frameworks."
         }
       ]
     }
