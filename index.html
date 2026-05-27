@@ -67,6 +67,34 @@
     <style>
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+        /* Responsive Parallax Hardening to prevent pixelation on mobile */
+        #home {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), url('https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll; /* Mobile fallback to prevent distortion & pixelation */
+        }
+        
+        #services {
+            background-image: linear-gradient(rgba(32, 71, 136, 0.85), rgba(21, 48, 96, 0.90)), url('https://lh3.googleusercontent.com/d/1g20VgPhV_pmdO9lLWVf48-k-BCapAZJb');
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: scroll;
+        }
+
+        #compliance {
+            background-image: linear-gradient(rgba(32, 71, 136, 0.85), rgba(32, 71, 136, 0.9)), url('https://lh3.googleusercontent.com/d/14WV0ghr7I2VhtD6yABZCRrZcHLtb8hcH');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+        }
+
+        @media (min-width: 768px) {
+            #home, #services, #compliance {
+                background-attachment: fixed; /* Beautiful parallax effect on desktop */
+            }
+        }
         
         /* Scroll Reveal Animation */
         .reveal {
@@ -190,7 +218,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -262,7 +290,7 @@
     </section>
 
     <!-- Servicios (Reveal) -->
-    <section id="services" class="py-36 text-white relative overflow-hidden" style="background-image: linear-gradient(rgba(32, 71, 136, 0.85), rgba(21, 48, 96, 0.90)), url('https://lh3.googleusercontent.com/d/1g20VgPhV_pmdO9lLWVf48-k-BCapAZJb'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="services" class="py-20 text-white relative overflow-hidden reveal">
         <!-- Digital Blueprint Design  -->
         <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#39D87E 1px, transparent 1px); background-size: 30px 30px;"></div>
         
@@ -498,7 +526,7 @@
     </section>
 
     <!-- Compliance (The Industrial Blueprint) -->
-    <section id="compliance" class="py-20 text-white relative overflow-hidden" style="background-image: linear-gradient(rgba(32, 71, 136, 0.85), rgba(32, 71, 136, 0.9)), url('https://lh3.googleusercontent.com/d/14WV0ghr7I2VhtD6yABZCRrZcHLtb8hcH'); background-attachment: fixed; background-size: cover; background-position: center;">
+    <section id="compliance" class="py-20 text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#39D87E 1px, transparent 1px); background-size: 30px 30px;"></div>
        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
