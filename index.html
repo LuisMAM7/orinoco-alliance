@@ -68,12 +68,12 @@
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
 
-        /* Responsive Parallax Hardening to prevent pixelation on mobile */
+        /* Responsive Parallax */
         #home {
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://lh3.googleusercontent.com/d/1In5TyDW5SaSQnXY8ttZ0rxmrmsTzhxI9');
             background-size: cover;
             background-position: center;
-            background-attachment: scroll; /* Mobile fallback to prevent distortion & pixelation */
+            background-attachment: scroll; 
         }
         
         #services {
@@ -92,7 +92,7 @@
 
         @media (min-width: 768px) {
             #home, #services, #compliance {
-                background-attachment: fixed; /* Beautiful parallax effect on desktop */
+                background-attachment: fixed; 
             }
         }
         
