@@ -227,8 +227,8 @@
 
     <style>
         :root {
-            --primary-navy: #162846;
-            --secondary-navy: #213963;
+            --primary-navy: #1C3D6E;
+            --secondary-navy: #264E86;
             --card-navy: #111F36;
             --accent-gold: #EAB308;
             --accent-gold-hover: #CA8A04;
@@ -242,7 +242,7 @@
         }
         body {
             font-family: 'Open Sans', sans-serif;
-            color: #162846;
+            color: #1C3D6E;
             background-color: #FFFFFF;
         }
         h1, h2, h3, h4, h5, h6, .font-heading {
@@ -256,7 +256,7 @@
 
         /* Parallax Hero Background */
         .hero-banner {
-            background-image: linear-gradient(180deg, rgba(22, 40, 70, 0.88) 0%, rgba(17, 31, 54, 0.93) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85');
+            background-image: linear-gradient(180deg, rgba(28, 61, 110, 0.88) 0%, rgba(17, 31, 54, 0.93) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85');
             background-size: cover;
             background-position: center;
             background-attachment: scroll;
@@ -313,14 +313,14 @@
             box-shadow: 0 0 16px rgba(20, 184, 166, 0.25);
         }
         .gold-border-glow {
-            box-shadow: 0 0 20px rgba(234, 179, 8, 0.25), 0 4px 14px rgba(22, 40, 70, 0.2);
+            box-shadow: 0 0 20px rgba(234, 179, 8, 0.25), 0 4px 14px rgba(28, 61, 110, 0.2);
         }
     </style>
 </head>
-<body class="bg-[#FFFFFF] text-slate-800 antialiased selection:bg-[#EAB308] selection:text-[#162846]">
+<body class="bg-[#FFFFFF] text-slate-800 antialiased selection:bg-[#EAB308] selection:text-[#1C3D6E]">
 
     <!-- 1. Top Navigation Bar -->
-    <nav id="navbar" class="fixed w-full bg-[#162846]/95 backdrop-blur-md z-50 border-b border-[#EAB308]/25 transition-all duration-300">
+    <nav id="navbar" class="fixed w-full bg-[#1C3D6E]/95 backdrop-blur-md z-50 border-b border-[#EAB308]/25 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 
@@ -350,7 +350,7 @@
                     </a>
 
                     <!-- CTA Button -->
-                    <a href="#contact" data-i18n="nav-book" class="bg-[#EAB308] hover:bg-[#CA8A04] text-[#162846] font-bold px-4 py-2 rounded-md text-xs uppercase tracking-wider transition-all shadow-md ml-2 hover:shadow-gold-sm">
+                    <a href="#contact" data-i18n="nav-book" class="bg-[#EAB308] hover:bg-[#CA8A04] text-[#1C3D6E] font-bold px-4 py-2 rounded-md text-xs uppercase tracking-wider transition-all shadow-md ml-2 hover:shadow-gold-sm">
                         Book Advisory
                     </a>
 
@@ -361,11 +361,11 @@
                             <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-[#EAB308] transition-transform duration-200" id="desktop-lang-chevron"></i>
                         </button>
                         <div id="desktop-lang-dropdown" class="absolute right-0 mt-2 w-32 bg-[#111F36] border border-[#EAB308]/40 rounded-md shadow-2xl hidden flex-col overflow-hidden z-50">
-                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#EAB308] hover:text-[#162846] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="en">
+                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#EAB308] hover:text-[#1C3D6E] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="en">
                                 <span>English</span>
                                 <span class="text-[10px] font-bold opacity-75">EN</span>
                             </button>
-                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#EAB308] hover:text-[#162846] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="es">
+                            <button class="lang-option flex items-center justify-between px-3 py-2.5 hover:bg-[#EAB308] hover:text-[#1C3D6E] text-slate-200 transition-colors text-left w-full text-xs font-semibold" data-lang="es">
                                 <span>Español</span>
                                 <span class="text-[10px] font-bold opacity-75">ES</span>
                             </button>
@@ -383,10 +383,10 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-[#162846] border-t border-[#EAB308]/20 pb-6 px-4">
+        <div id="mobile-menu" class="hidden lg:hidden bg-[#1C3D6E] border-t border-[#EAB308]/20 pb-6 px-4">
             <!-- Mobile Language Toggle Bar -->
             <div class="py-3 border-b border-white/10 mb-4 flex justify-center gap-3">
-                <button class="mobile-lang-btn active px-6 py-1.5 rounded-full text-xs font-bold uppercase transition-all bg-[#EAB308] text-[#162846] shadow-md" data-lang="es">
+                <button class="mobile-lang-btn active px-6 py-1.5 rounded-full text-xs font-bold uppercase transition-all bg-[#EAB308] text-[#1C3D6E] shadow-md" data-lang="es">
                     ES • Español
                 </button>
                 <button class="mobile-lang-btn px-6 py-1.5 rounded-full text-xs font-bold uppercase transition-all bg-white/10 text-white border border-transparent" data-lang="en">
@@ -403,7 +403,7 @@
                 <a href="#contact" data-i18n="nav-contact" class="mobile-link block px-4 py-2.5 text-sm font-semibold text-slate-200 hover:text-[#EAB308] hover:bg-white/5 rounded-md">Contacto</a>
                 
                 <div class="pt-4">
-                    <a href="#contact" data-i18n="nav-book" class="mobile-link block w-full text-center bg-[#EAB308] text-[#162846] font-bold py-3 rounded-md text-xs uppercase tracking-wider">
+                    <a href="#contact" data-i18n="nav-book" class="mobile-link block w-full text-center bg-[#EAB308] text-[#1C3D6E] font-bold py-3 rounded-md text-xs uppercase tracking-wider">
                         Book Advisory
                     </a>
                 </div>
@@ -419,7 +419,7 @@
                 <!-- Left Column: Content & CTAs -->
                 <div class="lg:col-span-7 text-center lg:text-left space-y-6">
                     <!-- Trust Badge -->
-                    <div class="inline-flex items-center gap-2 bg-[#213963]/90 border border-[#EAB308]/40 px-4 py-1.5 rounded-full backdrop-blur-md shadow-md">
+                    <div class="inline-flex items-center gap-2 bg-[#264E86]/90 border border-[#EAB308]/40 px-4 py-1.5 rounded-full backdrop-blur-md shadow-md">
                         <span class="w-2 h-2 rounded-full bg-[#14B8A6] animate-pulse"></span>
                         <i data-lucide="shield-check" class="w-4 h-4 text-[#14B8A6]"></i>
                         <span class="text-xs sm:text-sm font-semibold text-slate-100 tracking-wide uppercase" data-i18n="hero-badge">
@@ -440,13 +440,13 @@
 
                     <!-- Dual CTAs -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="https://wa.me/584221624056" id="hero-wa-btn" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#EAB308] hover:bg-[#CA8A04] text-[#162846] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all shadow-xl hover:-translate-y-0.5">
+                        <a href="https://wa.me/584221624056" id="hero-wa-btn" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#EAB308] hover:bg-[#CA8A04] text-[#1C3D6E] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all shadow-xl hover:-translate-y-0.5">
                             <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
                             <span data-i18n="hero-btn-wa">Consultar por WhatsApp</span>
                         </a>
-                        <a href="#portfolio" data-i18n="hero-btn-portfolio" class="w-full sm:w-auto inline-flex items-center justify-center border-2 border-white/80 text-white hover:bg-white hover:text-[#162846] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all backdrop-blur-xs">
+                        <a href="#portfolio" data-i18n="hero-btn-portfolio" class="w-full sm:w-auto inline-flex items-center justify-center border-2 border-white/80 text-white hover:bg-white hover:text-[#1C3D6E] font-bold px-8 py-4 rounded-md uppercase tracking-wider text-xs sm:text-sm transition-all backdrop-blur-xs">
                             Ver Propiedades
                         </a>
                     </div>
@@ -469,7 +469,7 @@
                                  class="w-full h-full object-cover object-top hover:scale-102 transition-transform duration-700">
                             
                             <!-- Bottom Floating Credential Overlay -->
-                            <div class="absolute bottom-4 left-4 right-4 bg-[#162846]/90 backdrop-blur-md border border-[#EAB308]/40 px-4 py-3 rounded-xl flex items-center justify-between shadow-lg">
+                            <div class="absolute bottom-4 left-4 right-4 bg-[#1C3D6E]/90 backdrop-blur-md border border-[#EAB308]/40 px-4 py-3 rounded-xl flex items-center justify-between shadow-lg">
                                 <div class="flex items-center gap-2.5">
                                     <div class="w-9 h-9 rounded-full bg-[#EAB308]/20 flex items-center justify-center text-[#EAB308] border border-[#EAB308]/50">
                                         <i data-lucide="award" class="w-5 h-5"></i>
@@ -493,16 +493,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#EAB308]" data-i18n="about-tag">Perfil Profesional</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#162846] mt-2 font-heading" data-i18n="about-title">Sobre Heidy Castillo</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C3D6E] mt-2 font-heading" data-i18n="about-title">Sobre Heidy Castillo</h2>
                 <div class="w-20 h-1 bg-[#EAB308] mx-auto mt-4"></div>
             </div>
 
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <!-- Left Column: Commanding Large Portrait Frame + Integrated Credentials Card -->
                 <div class="lg:col-span-5">
-                    <div class="bg-gradient-to-b from-[#162846] to-[#111F36] rounded-3xl overflow-hidden shadow-2xl border border-[#EAB308]/40 relative group">
+                    <div class="bg-gradient-to-b from-[#1C3D6E] to-[#111F36] rounded-3xl overflow-hidden shadow-2xl border border-[#EAB308]/40 relative group">
                         <!-- Prominent Luxury Portrait Frame -->
-                        <div class="relative w-full aspect-[4/5] sm:h-[440px] lg:h-[480px] overflow-hidden bg-[#213963]">
+                        <div class="relative w-full aspect-[4/5] sm:h-[440px] lg:h-[480px] overflow-hidden bg-[#264E86]">
                             <img src="photos/heidy-about.webp" 
                                  alt="Heidy Castillo - Agente Inmobiliaria Certificada" 
                                  width="600" 
@@ -512,11 +512,11 @@
                                  class="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-700">
                             
                             <!-- Ambient Bottom Gradient -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#162846] via-[#162846]/20 to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#1C3D6E] via-[#1C3D6E]/20 to-transparent"></div>
                             
                             <!-- Overlay Identity Badge -->
                             <div class="absolute bottom-4 left-5 right-5">
-                                <span class="inline-flex items-center gap-1 text-[10px] font-bold text-[#EAB308] bg-[#162846]/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#EAB308]/40 uppercase tracking-widest mb-1.5">
+                                <span class="inline-flex items-center gap-1 text-[10px] font-bold text-[#EAB308] bg-[#1C3D6E]/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#EAB308]/40 uppercase tracking-widest mb-1.5">
                                     Certified Realtor®
                                 </span>
                                 <h3 class="text-2xl font-bold font-heading text-white tracking-wide">Heidy Castillo</h3>
@@ -525,7 +525,7 @@
                         </div>
 
                         <!-- Seamlessly Attached Credential Details -->
-                        <div class="p-6 sm:p-7 space-y-4 border-t border-[#EAB308]/30 bg-[#162846]/95">
+                        <div class="p-6 sm:p-7 space-y-4 border-t border-[#EAB308]/30 bg-[#1C3D6E]/95">
                             <div class="flex items-start gap-3.5">
                                 <div class="w-9 h-9 rounded-xl bg-[#EAB308]/15 flex items-center justify-center text-[#EAB308] shrink-0 border border-[#EAB308]/30 mt-0.5">
                                     <i data-lucide="shield-check" class="w-5 h-5"></i>
@@ -559,7 +559,7 @@
 
                 <!-- Right Column: Narrative & Stats -->
                 <div class="lg:col-span-7 space-y-6">
-                    <h3 class="text-2xl sm:text-3xl font-bold text-[#162846] font-heading leading-tight" data-i18n="about-narrative-title">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-[#1C3D6E] font-heading leading-tight" data-i18n="about-narrative-title">
                         Tus ojos, escudo legal y guía estratégica en el mercado inmobiliario de Margarita
                     </h3>
                     <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-i18n="about-p1">
@@ -572,7 +572,7 @@
                     <!-- Stats Grid -->
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#162846] font-heading">+4</span>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-[#1C3D6E] font-heading">+4</span>
                             <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide" data-i18n="stat-years">Años de Asesoría</span>
                         </div>
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center">
@@ -594,7 +594,7 @@
     </section>
 
     <!-- 4. Why Invest in Isla de Margarita -->
-    <section id="why-margarita" class="py-24 bg-[#162846] text-white reveal">
+    <section id="why-margarita" class="py-24 bg-[#1C3D6E] text-white reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#EAB308]" data-i18n="why-tag">Oportunidades de Inversión</span>
@@ -607,7 +607,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Pillar 1 -->
-                <div class="bg-[#213963] p-8 rounded-2xl border border-white/10 hover:border-[#EAB308]/60 transition-all duration-300 shadow-xl group">
+                <div class="bg-[#264E86] p-8 rounded-2xl border border-white/10 hover:border-[#EAB308]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-14 h-14 rounded-xl bg-[#EAB308]/15 flex items-center justify-center text-[#EAB308] mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="trending-up" class="w-7 h-7"></i>
                     </div>
@@ -618,7 +618,7 @@
                 </div>
 
                 <!-- Pillar 2 -->
-                <div class="bg-[#213963] p-8 rounded-2xl border border-white/10 hover:border-[#EAB308]/60 transition-all duration-300 shadow-xl group">
+                <div class="bg-[#264E86] p-8 rounded-2xl border border-white/10 hover:border-[#EAB308]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-14 h-14 rounded-xl bg-[#EAB308]/15 flex items-center justify-center text-[#EAB308] mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="palmtree" class="w-7 h-7"></i>
                     </div>
@@ -629,7 +629,7 @@
                 </div>
 
                 <!-- Pillar 3 -->
-                <div class="bg-[#213963] p-8 rounded-2xl border border-white/10 hover:border-[#EAB308]/60 transition-all duration-300 shadow-xl group">
+                <div class="bg-[#264E86] p-8 rounded-2xl border border-white/10 hover:border-[#EAB308]/60 transition-all duration-300 shadow-xl group">
                     <div class="w-14 h-14 rounded-xl bg-[#EAB308]/15 flex items-center justify-center text-[#EAB308] mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="dollar-sign" class="w-7 h-7"></i>
                     </div>
@@ -647,7 +647,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#EAB308]" data-i18n="services-tag">Soluciones Integrales</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#162846] mt-2 font-heading" data-i18n="services-title">Servicios Inmobiliarios Especializados</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C3D6E] mt-2 font-heading" data-i18n="services-title">Servicios Inmobiliarios Especializados</h2>
                 <div class="w-20 h-1 bg-[#EAB308] mx-auto mt-4"></div>
             </div>
 
@@ -655,10 +655,10 @@
                 <!-- Service 1 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#EAB308]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#162846] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#1C3D6E] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="home" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#162846] mb-2 font-heading" data-i18n="srv-1-title">Compra y Venta de Inmuebles</h3>
+                        <h3 class="text-lg font-bold text-[#1C3D6E] mb-2 font-heading" data-i18n="srv-1-title">Compra y Venta de Inmuebles</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-1-desc">
                             Búsqueda personalizada y representación para apartamentos, villas frente al mar, locales comerciales y terrenos en las mejores zonas de Margarita.
                         </p>
@@ -668,10 +668,10 @@
                 <!-- Service 2 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#EAB308]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#162846] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#1C3D6E] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="key" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#162846] mb-2 font-heading" data-i18n="srv-2-title">Gestión de Alquileres</h3>
+                        <h3 class="text-lg font-bold text-[#1C3D6E] mb-2 font-heading" data-i18n="srv-2-title">Gestión de Alquileres</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-2-desc">
                             Administración integral de propiedades en renta vacacional y residencial para propietarios a distancia, con estricto filtro de inquilinos.
                         </p>
@@ -681,10 +681,10 @@
                 <!-- Service 3 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#EAB308]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#162846] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#1C3D6E] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#162846] mb-2 font-heading" data-i18n="srv-3-title">Análisis Comparativo de Mercado (ACM)</h3>
+                        <h3 class="text-lg font-bold text-[#1C3D6E] mb-2 font-heading" data-i18n="srv-3-title">Análisis Comparativo de Mercado (ACM)</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-3-desc">
                             Valuaciones basadas en datos duros de transacciones reales cerradas, evitando sobreprecios de portales.
                         </p>
@@ -694,10 +694,10 @@
                 <!-- Service 4 -->
                 <div class="bg-white p-7 rounded-xl shadow-md border border-slate-200/80 hover:shadow-xl hover:border-[#EAB308]/70 transition-all duration-300 group flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-lg bg-[#162846] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
+                        <div class="w-12 h-12 rounded-lg bg-[#1C3D6E] flex items-center justify-center text-[#EAB308] mb-5 group-hover:scale-105 transition-transform">
                             <i data-lucide="file-check" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-[#162846] mb-2 font-heading" data-i18n="srv-4-title">Seguridad Legal y Cierre Registral</h3>
+                        <h3 class="text-lg font-bold text-[#1C3D6E] mb-2 font-heading" data-i18n="srv-4-title">Seguridad Legal y Cierre Registral</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="srv-4-desc">
                             Auditoría de títulos, solvencias municipales, redacción de contratos, asesoría en poderes y acompañamiento ante el Registro Público (SAREN).
                         </p>
@@ -712,12 +712,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#EAB308]" data-i18n="portfolio-tag">Oportunidad Exclusiva</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#162846] mt-2 font-heading" data-i18n="portfolio-title">Propiedad en Venta</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C3D6E] mt-2 font-heading" data-i18n="portfolio-title">Propiedad en Venta</h2>
                 <div class="w-20 h-1 bg-[#EAB308] mx-auto mt-4"></div>
             </div>
 
             <!-- EXCLUSIVE SHOWCASE: Real Apartment in Costa Azul -->
-            <div class="bg-gradient-to-br from-[#162846] to-[#213963] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#EAB308]/40 shadow-2xl text-white">
+            <div class="bg-gradient-to-br from-[#1C3D6E] to-[#264E86] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#EAB308]/40 shadow-2xl text-white">
                 
                 <!-- Listing Header & Price Badge -->
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-white/10">
@@ -747,7 +747,7 @@
                            id="prop-showcase-wa" 
                            target="_blank" 
                            rel="noopener noreferrer" 
-                           class="prop-wa-link inline-flex items-center gap-2.5 bg-[#EAB308] hover:bg-[#CA8A04] text-[#162846] font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-xl hover:-translate-y-0.5" 
+                           class="prop-wa-link inline-flex items-center gap-2.5 bg-[#EAB308] hover:bg-[#CA8A04] text-[#1C3D6E] font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-xl hover:-translate-y-0.5" 
                            data-prop="prop-costa-azul">
                             <i data-lucide="message-circle" class="w-4 h-4"></i>
                             <span data-i18n="prop-btn-consult">Consultar por WhatsApp</span>
@@ -894,7 +894,7 @@
                             <a href="https://wa.me/584221624056?text=Hola%20Heidy%2C%20tengo%20inter%C3%A9s%20en%20el%20Apartamento%20en%20Urb.%20Dumar%20Costa%20Azul%20(%24108.000%20USD).%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
                                target="_blank" 
                                rel="noopener noreferrer" 
-                               class="w-full inline-flex items-center justify-center gap-2 bg-[#EAB308] hover:bg-[#CA8A04] text-[#162846] font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-gold-sm">
+                               class="w-full inline-flex items-center justify-center gap-2 bg-[#EAB308] hover:bg-[#CA8A04] text-[#1C3D6E] font-bold py-3.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-lg hover:shadow-gold-sm">
                                 <i data-lucide="calendar" class="w-4 h-4"></i>
                                 <span data-i18n="prop-btn-schedule">Agendar Visita / Recibir Dossier</span>
                             </a>
@@ -908,7 +908,7 @@
     </section>
 
     <!-- 7. Legal Security & Risk Mitigation -->
-    <section id="legal-security" class="py-24 bg-[#162846] text-white relative overflow-hidden reveal">
+    <section id="legal-security" class="py-24 bg-[#1C3D6E] text-white relative overflow-hidden reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#EAB308]" data-i18n="sec-tag">El Factor Confianza</span>
@@ -923,7 +923,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Step 1 -->
                 <div class="bg-[#111F36] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#162846] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">01</div></div>
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#1C3D6E] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">01</div></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-1-title">Filtro Inicial y Due Diligence</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-1-desc">
                         Verificación exhaustiva de identidad del propietario, solvencias municipales e historial del inmueble.
@@ -932,7 +932,7 @@
 
                 <!-- Step 2 -->
                 <div class="bg-[#111F36] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#162846] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">02</div></div>
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#1C3D6E] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">02</div></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-2-title">Auditoría de Tradición Legal</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-2-desc">
                         Revisión documental en registros públicos para garantizar cero gravámenes o disputas de propiedad.
@@ -941,7 +941,7 @@
 
                 <!-- Step 3 -->
                 <div class="bg-[#111F36] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#162846] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">03</div></div>
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#1C3D6E] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">03</div></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-3-title">Redacción de Contrato de Compraventa</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-3-desc">
                         Términos claros, esquemas de pago protegidos y gestión de poderes notariales si te encuentras fuera del país.
@@ -950,7 +950,7 @@
 
                 <!-- Step 4 -->
                 <div class="bg-[#111F36] p-7 rounded-2xl border border-white/10 relative">
-                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#162846] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">04</div></div>
+                    <div class="flex items-center justify-between mb-4"><div class="w-10 h-10 rounded-full bg-[#EAB308] text-[#1C3D6E] font-extrabold flex items-center justify-center text-sm font-heading shadow-md">04</div></div>
                     <h3 class="text-lg font-bold text-white mb-2 font-heading" data-i18n="step-4-title">Firma Registral y Entrega de Llaves</h3>
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="step-4-desc">
                         Protocolización oficial ante el Registro Público (SAREN) y entrega del documento debidamente registrado.
@@ -965,7 +965,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#EAB308]" data-i18n="contact-tag">Contacto Directo</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#162846] mt-2 font-heading" data-i18n="contact-title">Coordina tu Asesoría Personalizada</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1C3D6E] mt-2 font-heading" data-i18n="contact-title">Coordina tu Asesoría Personalizada</h2>
                 <div class="w-20 h-1 bg-[#EAB308] mx-auto mt-4"></div>
                 <p class="text-slate-600 max-w-2xl mx-auto mt-4 text-sm sm:text-base font-normal" data-i18n="contact-subtitle">
                     Ya sea que desees invertir, vender o auditar legalmente un inmueble en Margarita, contáctate directamente con Heidy Castillo.
@@ -978,7 +978,7 @@
                 <div class="lg:col-span-5 space-y-8">
                     
                     <!-- Direct WhatsApp Card -->
-                    <div class="bg-[#162846] text-white p-7 rounded-2xl shadow-xl border border-[#EAB308]/30">
+                    <div class="bg-[#1C3D6E] text-white p-7 rounded-2xl shadow-xl border border-[#EAB308]/30">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 rounded-xl bg-[#14B8A6]/20 flex items-center justify-center text-[#14B8A6]">
                                 <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg">
@@ -1002,49 +1002,49 @@
                         <!-- Phone with Copy -->
                         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#162846]">
+                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#1C3D6E]">
                                     <i data-lucide="phone" class="w-5 h-5"></i>
                                 </div>
                                 <div>
                                     <p class="text-xs text-slate-500 font-semibold uppercase" data-i18n="contact-phone-label">Teléfono</p>
-                                    <a href="tel:+584221624056" class="text-sm font-bold text-[#162846] hover:text-[#EAB308] transition-colors">+58 422-1624056</a>
+                                    <a href="tel:+584221624056" class="text-sm font-bold text-[#1C3D6E] hover:text-[#EAB308] transition-colors">+58 422-1624056</a>
                                 </div>
                             </div>
                             <div class="relative">
                                 <button onclick="copyToClipboard('+584221624056', this)" class="p-2 text-slate-400 hover:text-[#EAB308] transition-colors rounded-md" title="Copy Phone Number">
                                     <i data-lucide="copy" class="w-4 h-4"></i>
                                 </button>
-                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#162846] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
+                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#1C3D6E] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
                             </div>
                         </div>
 
                         <!-- Email with Copy -->
                         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#162846]">
+                                <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#1C3D6E]">
                                     <i data-lucide="mail" class="w-5 h-5"></i>
                                 </div>
                                 <div>
                                     <p class="text-xs text-slate-500 font-semibold uppercase" data-i18n="contact-email-label">Correo Electrónico</p>
-                                    <a href="mailto:heicasti2302@gmail.com" class="text-sm font-bold text-[#162846] hover:text-[#EAB308] transition-colors break-all">heicasti2302@gmail.com</a>
+                                    <a href="mailto:heicasti2302@gmail.com" class="text-sm font-bold text-[#1C3D6E] hover:text-[#EAB308] transition-colors break-all">heicasti2302@gmail.com</a>
                                 </div>
                             </div>
                             <div class="relative">
                                 <button onclick="copyToClipboard('heicasti2302@gmail.com', this)" class="p-2 text-slate-400 hover:text-[#EAB308] transition-colors rounded-md" title="Copy Email">
                                     <i data-lucide="copy" class="w-4 h-4"></i>
                                 </button>
-                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#162846] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
+                                <span class="copy-feedback opacity-0 pointer-events-none absolute right-0 top-full mt-1 bg-[#1C3D6E] text-white text-[10px] py-1 px-2 rounded shadow-lg whitespace-nowrap" data-i18n="copy-success">¡Copiado con éxito!</span>
                             </div>
                         </div>
 
                         <!-- Office Location -->
                         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#162846]">
+                            <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-[#1C3D6E]">
                                 <i data-lucide="map-pin" class="w-5 h-5"></i>
                             </div>
                             <div>
                                 <p class="text-xs text-slate-500 font-semibold uppercase" data-i18n="contact-loc-label">Ubicación & Cobertura</p>
-                                <p class="text-sm font-bold text-[#162846]">Pampatar • Isla de Margarita, Venezuela</p>
+                                <p class="text-sm font-bold text-[#1C3D6E]">Pampatar • Isla de Margarita, Venezuela</p>
                             </div>
                         </div>
 
@@ -1089,7 +1089,7 @@
                             <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#EAB308] focus:border-transparent outline-none transition-all text-sm" placeholder="Cuéntanos sobre tus objetivos inmobiliarios, zona preferida o presupuesto..." data-i18n-ph="form-msg-ph"></textarea>
                         </div>
 
-                        <button type="submit" id="form-submit-btn" class="w-full bg-[#162846] hover:bg-[#EAB308] hover:text-[#162846] text-white font-bold py-4 rounded-lg uppercase tracking-wider text-xs sm:text-sm transition-all shadow-md">
+                        <button type="submit" id="form-submit-btn" class="w-full bg-[#1C3D6E] hover:bg-[#EAB308] hover:text-[#1C3D6E] text-white font-bold py-4 rounded-lg uppercase tracking-wider text-xs sm:text-sm transition-all shadow-md">
                             <span data-i18n="form-submit">Enviar Solicitud de Asesoría</span>
                         </button>
                         
@@ -1101,11 +1101,11 @@
                         <div class="w-16 h-16 rounded-full bg-[#EAB308]/20 flex items-center justify-center text-[#EAB308] mb-4">
                             <i data-lucide="check-circle" class="w-10 h-10"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-[#162846] font-heading mb-2" data-i18n="form-success-title">¡Mensaje Enviado!</h3>
+                        <h3 class="text-2xl font-bold text-[#1C3D6E] font-heading mb-2" data-i18n="form-success-title">¡Mensaje Enviado!</h3>
                         <p class="text-slate-600 text-sm max-w-md mb-6" data-i18n="form-success-desc">
                             Gracias por comunicarte. Heidy Castillo revisará tu solicitud y se pondrá en contacto contigo a la brevedad.
                         </p>
-                        <button onclick="resetContactForm()" class="bg-[#162846] text-white font-bold px-6 py-2.5 rounded-lg text-xs uppercase tracking-wider hover:bg-[#EAB308] hover:text-[#162846] transition-colors" data-i18n="form-success-btn">
+                        <button onclick="resetContactForm()" class="bg-[#1C3D6E] text-white font-bold px-6 py-2.5 rounded-lg text-xs uppercase tracking-wider hover:bg-[#EAB308] hover:text-[#1C3D6E] transition-colors" data-i18n="form-success-btn">
                             Enviar Otro Mensaje
                         </button>
                     </div>
@@ -1116,7 +1116,7 @@
     </section>
 
     <!-- 9. Footer -->
-    <footer class="bg-[#162846] text-slate-300 pt-16 pb-12 border-t border-[#EAB308]/30">
+    <footer class="bg-[#1C3D6E] text-slate-300 pt-16 pb-12 border-t border-[#EAB308]/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
                 
@@ -1153,7 +1153,7 @@
                         <a href="https://wa.me/584221624056" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#14B8A6] hover:text-white transition-colors" title="WhatsApp">
                             <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                         </a>
-                        <a href="mailto:heicasti2302@gmail.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#EAB308] hover:text-[#162846] transition-colors" title="Email">
+                        <a href="mailto:heicasti2302@gmail.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#EAB308] hover:text-[#1C3D6E] transition-colors" title="Email">
                             <i data-lucide="mail" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -1177,7 +1177,7 @@
     </a>
 
     <!-- Floating Scroll-To-Top Button -->
-    <button id="scroll-top-btn" class="fixed bottom-5 right-5 z-50 p-3 bg-[#EAB308] hover:bg-[#CA8A04] text-[#162846] rounded-full shadow-2xl transition-all duration-300 scroll-hidden" aria-label="Scroll to top">
+    <button id="scroll-top-btn" class="fixed bottom-5 right-5 z-50 p-3 bg-[#EAB308] hover:bg-[#CA8A04] text-[#1C3D6E] rounded-full shadow-2xl transition-all duration-300 scroll-hidden" aria-label="Scroll to top">
         <i data-lucide="arrow-up" class="w-5 h-5"></i>
     </button>
 
@@ -1506,7 +1506,7 @@
             document.querySelectorAll('.mobile-lang-btn').forEach(btn => {
                 const isActive = btn.dataset.lang === currentLang;
                 btn.classList.toggle('bg-[#EAB308]', isActive);
-                btn.classList.toggle('text-[#162846]', isActive);
+                btn.classList.toggle('text-[#1C3D6E]', isActive);
                 btn.classList.toggle('bg-white/10', !isActive);
                 btn.classList.toggle('text-white', !isActive);
             });
